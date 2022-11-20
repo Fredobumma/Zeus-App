@@ -20,7 +20,14 @@ module.exports = {
       accent: ["Lexend Deca", "sans-serif"],
       heading: ["Syne", "sans-serif"],
     },
-    extend: {},
+    borderRadius: {
+      15: "15px",
+    },
+    extend: {
+      colors: {
+        secondary: "#532C59",
+      },
+    },
   },
   plugins: [],
 };
