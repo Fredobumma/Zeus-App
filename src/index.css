@@ -31,3 +31,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+/* Sprite */
+.sprite {
+  background: url("./common/images/sprite.png") no-repeat top left;
+  display: inline-block;
+}

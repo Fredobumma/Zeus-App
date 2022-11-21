@@ -24,6 +24,14 @@ module.exports = {
       15: "15px",
     },
     extend: {
+      width: {
+        81: "81px",
+        sprite: "412px",
+      },
+      height: {
+        80: "80px",
+        sprite: "396px",
+      },
       colors: {
         secondary: "#532C59",
       },
