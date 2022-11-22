@@ -7,21 +7,9 @@ module.exports = {
       laptop: "1024px",
       desktop: "1280px",
     },
-    fontSize: {
-      40: ["40px", "72px"],
-      80: ["80px", "96px"],
-      "3xl": ["30px", "48px"],
-      "5xl": ["48px", "64px"],
-      "7xl": ["72px", "88px"],
-      xs: "12px",
-      sm: ["14px", "20px"],
-    },
     fontFamily: {
       accent: ["Lexend Deca", "sans-serif"],
       heading: ["Syne", "sans-serif"],
-    },
-    borderRadius: {
-      15: "15px",
     },
     extend: {
       width: {
@@ -29,11 +17,22 @@ module.exports = {
         sprite: "412px",
       },
       height: {
-        80: "80px",
         sprite: "396px",
+      },
+      fontSize: {
+        28: ["28px", "36px"],
+        40: ["40px", "72px"],
+        80: ["80px", "96px"],
+        "3xl": ["30px", "48px"],
+        "5xl": ["48px", "64px"],
+        "7xl": ["72px", "88px"],
+        xs: "12px",
       },
       colors: {
         secondary: "#532C59",
+      },
+      borderRadius: {
+        15: "15px",
       },
     },
   },
