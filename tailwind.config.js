@@ -31,8 +31,13 @@ module.exports = {
       colors: {
         secondary: "#532C59",
       },
+      boxShadow: {
+        custom1:
+          "rgba(192, 166, 225, 0.5) 0px 0px 0px 2px, rgba(162, 169, 177, 0.65) 0px 4px 6px -1px, rgba(62, 62, 192, 0.08) 0px 1px 0px inset",
+      },
       borderRadius: {
         15: "15px",
+        "4xl": "40px",
       },
     },
   },
