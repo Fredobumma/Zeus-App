@@ -4,6 +4,7 @@ module.exports = {
   theme: {
     screens: {
       tablet: "640px",
+      bigTab: "768px",
       laptop: "1024px",
       desktop: "1280px",
     },
@@ -14,6 +15,10 @@ module.exports = {
     extend: {
       width: {
         81: "81px",
+        85: "85.33",
+        135: "135px",
+        150: "`150px",
+        "sp-x1": "241px",
         sprite: "412px",
       },
       height: {
@@ -21,6 +26,7 @@ module.exports = {
       },
       fontSize: {
         28: ["28px", "36px"],
+        32: ["32px", "42px"],
         40: ["40px", "72px"],
         80: ["80px", "96px"],
         "3xl": ["30px", "48px"],

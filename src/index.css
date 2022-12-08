@@ -35,5 +35,5 @@ code {
 /* Sprite */
 .sprite {
   background: url("./common/images/sprite.png") no-repeat top left;
-  display: inline-block;
+  display: block;
 }
