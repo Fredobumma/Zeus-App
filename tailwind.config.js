@@ -21,6 +21,10 @@ module.exports = {
         "sp-x1": "241px",
         sprite: "412px",
       },
+      maxWidth: {
+        400: "400px",
+        700: "700px",
+      },
       height: {
         sprite: "396px",
       },
@@ -44,6 +48,10 @@ module.exports = {
       borderRadius: {
         15: "15px",
         "4xl": "40px",
+      },
+      backgroundImage: {
+        callOut:
+          "radial-gradient(circle, rgba(255, 255, 255, 1) 60%, rgb(230, 214, 255) 100%)",
       },
     },
   },
