@@ -18,13 +18,26 @@ body {
   font-family: "Space Grotesk", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin: 0;
+  margin: 0 auto;
+  max-width: 1440px;
   padding: 0 16px;
 }
 
 @media screen and (min-width: 768px) {
   body {
     padding: 0 20px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    padding: 0 32px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  body {
+    padding: 0 70px;
   }
 }
 

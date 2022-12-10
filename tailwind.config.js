@@ -17,7 +17,7 @@ module.exports = {
         81: "81px",
         85: "85.33",
         135: "135px",
-        150: "`150px",
+        150: "150px",
         "sp-x1": "241px",
         sprite: "412px",
       },
@@ -41,6 +41,7 @@ module.exports = {
       },
       colors: {
         secondary: "#532C59",
+        line: "#CCD5DF",
       },
       boxShadow: {
         custom1:
