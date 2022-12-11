@@ -16,15 +16,21 @@ module.exports = {
       width: {
         81: "81px",
         85: "85.33",
+        121: "121px",
         135: "135px",
         150: "150px",
         "sp-x1": "241px",
         sprite: "412px",
       },
+      spacing: {
+        minmax: "min(4vw, 16px)",
+        "minmax-2": "min(2vw, 12px)",
+      },
       maxWidth: {
         400: "400px",
         415: "415px",
         700: "700px",
+        "90%": "90%",
       },
       height: {
         sprite: "396px",
