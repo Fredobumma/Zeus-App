@@ -19,7 +19,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0 auto;
-  max-width: 1440px;
+  max-width: min(100%, 1440px);
+  overflow-x: hidden;
   padding: 0 16px;
 }
 

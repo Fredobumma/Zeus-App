@@ -1,7 +1,8 @@
 // import { useState } from "react";
 import { SVGSource } from "./common/svg";
-// import Navbar from "./common/component blocks/navbar";
-// import Footer from "./common/component blocks/block-footer";
+// import Navbar from "./common/component-blocks/navbar";
+// import Hero from "./common/component-blocks/block-hero";
+// import Footer from "./common/component-blocks/block-footer";
 // import useWindowDimensions from "./common/utilities/useWindowDimensions";
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
         toggleMenu={handleMenuIcon}
         toggleSubMenu={handleSubMenuIcon}
       /> */}
+      {/* <Hero /> */}
       {/* <Footer screenWidth={width} /> */}
     </main>
   );

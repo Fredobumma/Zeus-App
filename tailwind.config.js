@@ -30,6 +30,7 @@ module.exports = {
         400: "400px",
         415: "415px",
         700: "700px",
+        "80%": "80%",
         "90%": "90%",
       },
       height: {
@@ -60,6 +61,8 @@ module.exports = {
       backgroundImage: {
         callOut:
           "radial-gradient(circle, rgba(255, 255, 255, 1) 60%, rgb(230, 214, 255) 100%)",
+        actFocHov:
+          "linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%)",
       },
     },
   },

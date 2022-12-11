@@ -8,7 +8,7 @@ const Button = ({ label, ...rest }) => {
 
   return (
     <button
-      className={`bg-secondary font-bold font-heading font-lg leading-5 rounded-15 text-white px-5 py-3 tablet:py-4 ${getClasses}`}
+      className={`active:bg-actFocHov focus:bg-actFocHov hover:bg-actFocHov bg-secondary font-bold font-heading font-lg leading-5 outline-0 rounded-15 text-white px-5 py-3 tablet:py-4 ${getClasses}`}
     >
       {label}
     </button>
