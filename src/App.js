@@ -2,6 +2,7 @@
 import { SVGSource } from "./common/svg";
 // import Navbar from "./common/component-blocks/navbar";
 // import Hero from "./common/component-blocks/block-hero";
+// import Showcase from "./common/component-blocks/block-showcase";
 // import Footer from "./common/component-blocks/block-footer";
 // import useWindowDimensions from "./common/utilities/useWindowDimensions";
 
@@ -34,6 +35,7 @@ function App() {
         toggleSubMenu={handleSubMenuIcon}
       /> */}
       {/* <Hero /> */}
+      {/* <Showcase /> */}
       {/* <Footer screenWidth={width} /> */}
     </main>
   );
