@@ -36,12 +36,15 @@ module.exports = {
       height: {
         sprite: "396px",
       },
+      gridTemplateColumns: {
+        faq: "1fr 2fr",
+      },
       fontSize: {
         28: ["28px", "36px"],
         32: ["32px", "42px"],
         40: ["40px", "72px"],
         80: ["80px", "96px"],
-        "3xl": ["30px", "48px"],
+        "3xl": ["32px", "48px"],
         "5xl": ["48px", "64px"],
         "7xl": ["72px", "88px"],
         xs: "12px",
