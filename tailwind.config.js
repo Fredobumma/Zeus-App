@@ -66,6 +66,8 @@ module.exports = {
           "radial-gradient(circle, rgba(255, 255, 255, 1) 60%, rgb(230, 214, 255) 100%)",
         actFocHov:
           "linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%)",
+        testimonial:
+          "linear-gradient(to bottom, rgba( 255, 255, 255, 0.2 ) 50%, rgba( 255, 255, 255, 0.8 ) 70%, rgba( 255, 255, 255, 1 ) 90% )",
       },
     },
   },
