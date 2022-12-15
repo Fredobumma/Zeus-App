@@ -4,7 +4,8 @@ import { SVGSource } from "./common/svg";
 // import Navbar from "./common/component-blocks/navbar";
 // import Hero from "./common/component-blocks/block-hero";
 // import Showcase from "./common/component-blocks/block-showcase";
-import Testimonials from "./common/component-blocks/block-testimonial";
+// import Executives from "./common/component-blocks/block-executives";
+// import Testimonials from "./common/component-blocks/block-testimonial";
 // import Faq from "./common/component-blocks/block-faq";
 // import Footer from "./common/component-blocks/block-footer";
 // import useWindowDimensions from "./common/utilities/useWindowDimensions";
@@ -43,7 +44,8 @@ function App() {
       /> */}
       {/* <Hero /> */}
       {/* <Showcase /> */}
-      <Testimonials />
+      {/* <Executives /> */}
+      {/* <Testimonials /> */}
       {/* <Faq collapsible={collapsible} handleCollapse={handleCollapsible} /> */}
       {/* <Footer screenWidth={width} /> */}
     </main>
