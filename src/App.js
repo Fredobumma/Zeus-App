@@ -8,6 +8,7 @@ import { SVGSource } from "./common/svg";
 // import OurServices from "./common/component-blocks/block-services";
 // import Testimonials from "./common/component-blocks/block-testimonial";
 // import Faq from "./common/component-blocks/block-faq";
+// import Callout from "./common/component-blocks/block-callout";
 // import Footer from "./common/component-blocks/block-footer";
 // import useWindowDimensions from "./common/utilities/useWindowDimensions";
 
@@ -49,6 +50,7 @@ function App() {
       {/* <OurServices /> */}
       {/* <Testimonials /> */}
       {/* <Faq collapsible={collapsible} handleCollapse={handleCollapsible} /> */}
+      {/* <Callout /> */}
       {/* <Footer screenWidth={width} /> */}
     </main>
   );
