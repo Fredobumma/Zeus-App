@@ -3,7 +3,7 @@ import { SVG } from "../svg";
 
 const Footer = ({ screenWidth }) => {
   return (
-    <div>
+    <div className="pb-8 pt-12 tablete:pt-16 laptop:pb-10 laptop:pt-20">
       {screenWidth >= 1280 ? (
         <div className="border-b border-line flex flex-row-reverse justify-between pb-10 relative">
           <span className="py-3">

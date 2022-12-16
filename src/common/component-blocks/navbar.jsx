@@ -9,7 +9,7 @@ const Navbar = ({
   toggleSubMenu,
 }) => {
   return (
-    <nav className="mt-2">
+    <nav className="mt-2 pb-3.5 laptop:pb-2">
       <div className="relative laptop:flex laptop:justify-between">
         <span className="hidden py-3 laptop:inline-block">
           <span className="active:opacity-100 active:text-secondary hover:opacity-100 hover:text-secondary font-medium opacity-50 px-6 py-3">
@@ -42,32 +42,32 @@ const Navbar = ({
             {subMenuIcon && (
               <div
                 id="sub-navbar-dropdown"
-                className="absolute bg-white divide-y-2 divide-gray-100 font-normal inset-x-0 max-w-90% mt-2 mx-auto rounded shadow text-center"
+                className="absolute bg-white divide-y-2 divide-gray-100 font-normal inset-x-0 max-w-90% mt-2 mx-auto rounded shadow text-center z-20"
               >
                 <ul
-                  className="py-1 text-sm text-gray-700 dark:text-gray-400"
+                  className="py-1 text-sm text-gray-700"
                   aria-labelledby="dropdownLargeButton"
                 >
                   <li>
                     <a
-                      // href="#"
-                      className="active:text-white active:bg-secondary block px-4 py-2 hover:bg-gray-100"
+                      href="#empty"
+                      className="active:text-white active:bg-secondary block focus:bg-gray-100 hover:bg-gray-100 outline-0 px-4 py-2"
                     >
                       Dashboard
                     </a>
                   </li>
                   <li>
                     <a
-                      // href="#"
-                      className="active:text-white active:bg-secondary block px-4 py-2 hover:bg-gray-100"
+                      href="#empty"
+                      className="active:text-white active:bg-secondary block focus:bg-gray-100 hover:bg-gray-100 outline-0 px-4 py-2"
                     >
                       Settings
                     </a>
                   </li>
                   <li>
                     <a
-                      // href="#"
-                      className="active:text-white active:bg-secondary block px-4 py-2 hover:bg-gray-100"
+                      href="#empty"
+                      className="active:text-white active:bg-secondary block focus:bg-gray-100 hover:bg-gray-100 outline-0 px-4 py-2"
                     >
                       Earnings
                     </a>
@@ -75,8 +75,8 @@ const Navbar = ({
                 </ul>
                 <div className="py-1">
                   <a
-                    // href="#"
-                    className="active:text-white active:bg-secondary block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    href="#empty"
+                    className="active:text-white active:bg-secondary block focus:bg-gray-100 hover:bg-gray-100 outline-0 px-4 py-2 text-sm text-gray-700"
                   >
                     Sign out
                   </a>
@@ -107,8 +107,8 @@ const Navbar = ({
             <ul className="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 hover:bg-gray-100">
               <li>
                 <a
-                  // href="#"
-                  className="active:text-white active:bg-secondary block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-white"
+                  href="#empty"
+                  className="active:text-white active:bg-secondary block focus:bg-white focus:text-secondary hover:bg-white hover:text-secondary py-2 pl-3 pr-4 text-gray-700 rounded outline-0"
                   aria-current="page"
                 >
                   Home
@@ -116,24 +116,24 @@ const Navbar = ({
               </li>
               <li>
                 <a
-                  // href="#"
-                  className="active:text-white active:bg-secondary block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-white"
+                  href="#empty"
+                  className="active:text-white active:bg-secondary block focus:bg-white focus:text-secondary hover:bg-white hover:text-secondary py-2 pl-3 pr-4 text-gray-700 rounded outline-0"
                 >
                   University
                 </a>
               </li>
               <li>
                 <a
-                  // href="#"
-                  className="active:text-white active:bg-secondary block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-white"
+                  href="#empty"
+                  className="active:text-white active:bg-secondary block focus:bg-white focus:text-secondary hover:bg-white hover:text-secondary py-2 pl-3 pr-4 text-gray-700 rounded outline-0"
                 >
                   Courses
                 </a>
               </li>
               <li>
                 <a
-                  // href="#"
-                  className="active:text-white active:bg-secondary block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-white"
+                  href="#empty"
+                  className="active:text-white active:bg-secondary block focus:bg-white focus:text-secondary hover:bg-white hover:text-secondary py-2 pl-3 pr-4 text-gray-700 rounded outline-0"
                 >
                   Use cases
                 </a>
@@ -142,7 +142,7 @@ const Navbar = ({
                 <button
                   id="dropdownNavbarLink"
                   data-dropdown-toggle="dropdownNavbar"
-                  className="active:text-white active:bg-secondary flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 rounded hover:bg-white"
+                  className="active:text-white active:bg-secondary focus:bg-white focus:text-secondary font-medium hover:bg-white hover:text-secondary flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-700 rounded outline-0"
                   onClick={() => toggleSubMenu()}
                 >
                   Plans
@@ -164,24 +164,24 @@ const Navbar = ({
                     >
                       <li>
                         <a
-                          // href="#"
-                          className="active:text-white active:bg-secondary block px-4 py-2 hover:bg-gray-100"
+                          href="#empty"
+                          className="active:text-white active:bg-secondary block focus:bg-gray-100 hover:bg-gray-100 outline-0 px-4 py-2"
                         >
                           Dashboard
                         </a>
                       </li>
                       <li>
                         <a
-                          // href="#"
-                          className="active:text-white active:bg-secondary block px-4 py-2 hover:bg-gray-100"
+                          href="#empty"
+                          className="active:text-white active:bg-secondary block focus:bg-gray-100 hover:bg-gray-100 outline-0 px-4 py-2"
                         >
                           Settings
                         </a>
                       </li>
                       <li>
                         <a
-                          // href="#"
-                          className="active:text-white active:bg-secondary block px-4 py-2 hover:bg-gray-100"
+                          href="#empty"
+                          className="active:text-white active:bg-secondary block focus:bg-gray-100 hover:bg-gray-100 outline-0 px-4 py-2"
                         >
                           Earnings
                         </a>
@@ -189,8 +189,8 @@ const Navbar = ({
                     </ul>
                     <div className="py-1">
                       <a
-                        // href="#"
-                        className="active:text-white active:bg-secondary block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                        href="#empty"
+                        className="active:text-white active:bg-secondary block focus:bg-gray-100 hover:bg-gray-100 outline-0 px-4 py-2 text-sm text-gray-700"
                       >
                         Sign out
                       </a>
@@ -200,8 +200,8 @@ const Navbar = ({
               </li>
               <li>
                 <a
-                  // href="#"
-                  className="active:text-white active:bg-secondary block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-white"
+                  href="#empty"
+                  className="active:text-white active:bg-secondary block focus:bg-white focus:text-secondary hover:bg-white hover:text-secondary outline-0 py-2 pl-3 pr-4 text-gray-700 rounded"
                 >
                   Resources
                 </a>
