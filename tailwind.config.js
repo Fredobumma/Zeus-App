@@ -62,10 +62,11 @@ module.exports = {
         "4xl": "40px",
       },
       backgroundImage: {
-        callOut:
-          "radial-gradient(circle, rgba(255, 255, 255, 1) 60%, rgb(230, 214, 255) 100%)",
         actFocHov:
           "linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%)",
+        callOut:
+          "radial-gradient(circle, rgba(255, 255, 255, 1) 60%, rgb(230, 214, 255) 100%)",
+        hero: "radial-gradient(circle, rgba(251,226,255,1) 0%, rgba(255,255,255,1) 40%, rgba(255,255,255,1) 100%)",
         testimonial:
           "linear-gradient(to bottom, rgba( 255, 255, 255, 0.2 ) 50%, rgba( 255, 255, 255, 0.8 ) 70%, rgba( 255, 255, 255, 1 ) 90% )",
       },
