@@ -1,4 +1,5 @@
 import React from "react";
+import { SVG } from "./svg";
 
 const FaqCollapsible = ({ text, collapsible, handleCollapse }) => {
   const toggle = collapsible.find((c) => c.id === text);
@@ -8,12 +9,12 @@ const FaqCollapsible = ({ text, collapsible, handleCollapse }) => {
       <div className="flex items-center justify-between">
         <p className="font-medium leading-5 text-base tablet:text-xl">{text}</p>
         <span
-          className={`fa-solid fa-angle-${
-            toggle && toggle.click ? "up" : "down"
-          } ml-5 mt-0.5 p-2 text-secondary`}
+          className="ml-5 mt-0.5 p-2"
           title="Click to expand/collapse"
           onClick={() => handleCollapse(text)}
-        ></span>
+        >
+          <SVG id={`angle-${toggle && toggle.click ? "up" : "down"}`} />
+        </span>
       </div>
       {toggle && toggle.click && (
         <p className="mt-3 text-secondary text-xs tablet:text-sm">

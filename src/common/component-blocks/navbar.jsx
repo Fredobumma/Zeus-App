@@ -11,33 +11,50 @@ const Navbar = ({
   return (
     <nav className="mt-2 pb-3.5 laptop:pb-2">
       <div className="relative laptop:flex laptop:justify-between">
-        <span className="hidden py-3 laptop:inline-block">
-          <span className="active:opacity-100 active:text-secondary hover:opacity-100 hover:text-secondary font-medium opacity-50 px-6 py-3">
-            Home
-          </span>
-          <span className="active:opacity-100 active:text-secondary hover:opacity-100 hover:text-secondary font-medium opacity-50 px-6 py-3">
-            University
-          </span>
-          <span className="active:opacity-100 active:text-secondary hover:opacity-100 hover:text-secondary font-medium opacity-50 px-6 py-3">
-            Courses
-          </span>
-        </span>
-        <span className="hidden py-3 laptop:inline-block">
-          <span className="active:opacity-100 active:text-secondary hover:opacity-100 hover:text-secondary font-medium opacity-50 px-6 py-3">
-            Use cases
-          </span>
-          <span className="relative">
-            <span
+        <ul className="hidden py-3 laptop:inline-flex">
+          <li>
+            <a
+              href="#empty"
               className="active:opacity-100 active:text-secondary hover:opacity-100 hover:text-secondary font-medium opacity-50 px-6 py-3"
+            >
+              Home
+            </a>
+          </li>
+          <li>
+            <a
+              href="#empty"
+              className="active:opacity-100 active:text-secondary hover:opacity-100 hover:text-secondary font-medium opacity-50 px-6 py-3"
+            >
+              University
+            </a>
+          </li>
+          <li>
+            <a
+              href="#empty"
+              className="active:opacity-100 active:text-secondary hover:opacity-100 hover:text-secondary font-medium opacity-50 px-6 py-3"
+            >
+              Courses
+            </a>
+          </li>
+        </ul>
+        <ul className="hidden py-3 laptop:inline-flex">
+          <li>
+            <a
+              href="#empty"
+              className="active:opacity-100 active:text-secondary hover:opacity-100 hover:text-secondary font-medium opacity-50 px-6 py-3"
+            >
+              Use cases
+            </a>
+          </li>
+          <li className="relative">
+            <span
+              className="active:opacity-100 active:text-secondary cursor-pointer hover:opacity-100 hover:text-secondary flex item font-medium opacity-50 pt-0 px-6 py-3"
               onClick={() => toggleSubMenu()}
             >
               Plans
-              <span
-                className={`fa-solid fa-angle-${
-                  (subMenuIcon && "up") || "down"
-                } pl-3 mt-0.5 text-secondary`}
-                title="Click to expand/collapse"
-              ></span>
+              <span className="pl-1" title="Click to expand/collapse">
+                <SVG id={`angle-${(subMenuIcon && "up") || "down"}`} />
+              </span>
             </span>
             {subMenuIcon && (
               <div
@@ -83,21 +100,26 @@ const Navbar = ({
                 </div>
               </div>
             )}
-          </span>
-          <span className="active:opacity-100 active:text-secondary hover:opacity-100 hover:text-secondary font-medium opacity-50 px-6 py-3">
-            Resources
-          </span>
-        </span>
+          </li>
+          <li>
+            <a
+              href="#empty"
+              className="active:opacity-100 active:text-secondary hover:opacity-100 hover:text-secondary font-medium opacity-50 px-6 py-3"
+            >
+              Resources
+            </a>
+          </li>
+        </ul>
         <button
           aria-controls="navbar-dropdown"
           aria-expanded="false"
-          className="inline-flex items-center mt-2 px-minmax-2 py-4 text-sm rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 laptop:hidden"
+          className="inline-flex items-center mt-1 px-minmax-2 py-2 text-sm rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 laptop:hidden"
           data-collapse-toggle="navbar-dropdown"
           title="Click to expand/collapse"
           type="button"
           onClick={() => toggleMenu()}
         >
-          <span className="fa-solid fa-bars fa-2xl"></span>
+          <SVG id="hamburger-menu" />
         </button>
         <span className="absolute h-8 inset-0 mt-2 mx-auto my-0 w-121 tablet:h-10 tablet:mt-1 tablet:w-150">
           <SVG id="logo" height="100%" width="100%" />
@@ -105,7 +127,7 @@ const Navbar = ({
         {menuIcon && screenWidth < 1024 && (
           <div className="mx-auto w-4/5" id="navbar-dropdown">
             <ul className="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 hover:bg-gray-100">
-              <li>
+              <li className="pl-0.5">
                 <a
                   href="#empty"
                   className="active:text-white active:bg-secondary block focus:bg-white focus:text-secondary hover:bg-white hover:text-secondary py-2 pl-3 pr-4 text-gray-700 rounded outline-0"
@@ -114,7 +136,7 @@ const Navbar = ({
                   Home
                 </a>
               </li>
-              <li>
+              <li className="pl-0.5">
                 <a
                   href="#empty"
                   className="active:text-white active:bg-secondary block focus:bg-white focus:text-secondary hover:bg-white hover:text-secondary py-2 pl-3 pr-4 text-gray-700 rounded outline-0"
@@ -122,7 +144,7 @@ const Navbar = ({
                   University
                 </a>
               </li>
-              <li>
+              <li className="pl-0.5">
                 <a
                   href="#empty"
                   className="active:text-white active:bg-secondary block focus:bg-white focus:text-secondary hover:bg-white hover:text-secondary py-2 pl-3 pr-4 text-gray-700 rounded outline-0"
@@ -130,7 +152,7 @@ const Navbar = ({
                   Courses
                 </a>
               </li>
-              <li>
+              <li className="pl-0.5">
                 <a
                   href="#empty"
                   className="active:text-white active:bg-secondary block focus:bg-white focus:text-secondary hover:bg-white hover:text-secondary py-2 pl-3 pr-4 text-gray-700 rounded outline-0"
@@ -138,21 +160,18 @@ const Navbar = ({
                   Use cases
                 </a>
               </li>
-              <li>
-                <button
+              <li className="pl-0.5">
+                <span
                   id="dropdownNavbarLink"
                   data-dropdown-toggle="dropdownNavbar"
-                  className="active:text-white active:bg-secondary focus:bg-white focus:text-secondary font-medium hover:bg-white hover:text-secondary flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-700 rounded outline-0"
+                  className="active:text-white active:bg-secondary cursor-pointer focus:bg-white focus:text-secondary font-medium hover:bg-white hover:text-secondary flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-700 rounded outline-0"
                   onClick={() => toggleSubMenu()}
                 >
                   Plans
-                  <span
-                    className={`fa-solid fa-angle-${
-                      (subMenuIcon && "up") || "down"
-                    } px-minmax mt-0.5 text-secondary`}
-                    title="Click to expand/collapse"
-                  ></span>
-                </button>
+                  <span title="Click to expand/collapse">
+                    <SVG id={`angle-${(subMenuIcon && "up") || "down"}`} />
+                  </span>
+                </span>
                 {subMenuIcon && (
                   <div
                     id="sub-navbar-dropdown"
@@ -198,7 +217,7 @@ const Navbar = ({
                   </div>
                 )}
               </li>
-              <li>
+              <li className="pl-0.5">
                 <a
                   href="#empty"
                   className="active:text-white active:bg-secondary block focus:bg-white focus:text-secondary hover:bg-white hover:text-secondary outline-0 py-2 pl-3 pr-4 text-gray-700 rounded"
