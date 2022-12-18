@@ -1,18 +1,19 @@
 import React from "react";
+import Header from "../header";
 
 const Showcase = () => {
   return (
     <section className="py-12 tablet:py-16 laptop:py-20">
-      <header className="max-w-80% mx-auto text-center bigTab:max-w-700 laptop:max-w-80%">
-        <h2 className="font-bold tablet:leading-[56px] text-3xl tablet:text-40 laptop:text-5xl">
-          Hottest Collections
-        </h2>
-        <p className="mb-8 mt-2 text-secondary text-sm tablet:text-base tablet:mb-12 tablet:mt-4 laptop:mb-16">
-          Ante ornare dictum dignissim erat natoque. Platea neque facilisis diam
-          id venenatis. Ultrices dolor, ac vel consectetur. Gravida lobortis
-          venenatis faucibus sed ipsum. Urna.
-        </p>
-      </header>
+      <Header
+        header="max-w-80% mx-auto text-center bigTab:max-w-700 laptop:max-w-80%"
+        type="h2"
+        heading="Hottest Collections"
+        headingClasses="font-bold tablet:leading-[56px] text-3xl tablet:text-40 laptop:text-5xl"
+        text="Ante ornare dictum dignissim erat natoque. Platea neque facilisis diam
+        id venenatis. Ultrices dolor, ac vel consectetur. Gravida lobortis
+        venenatis faucibus sed ipsum. Urna."
+        textClasses="mb-8 mt-2 text-secondary text-sm tablet:text-base tablet:mb-12 tablet:mt-4 laptop:mb-16"
+      />
       <div className="gap-x-4 gap-y-8 grid bigTab:gap-y-12 bigTab:grid-cols-3 laptop:gap-x-6 desktop:gap-8 desktop:gap-y-16">
         <div className="inline-flex items-center flex-col h-auto">
           <span className="sprite moonbirds !bg-[-6974px_0] h-sprite w-sp-x1 tablet:!bg-[-4630px_0] tablet:w-sprite bigTab:!bg-[-6974px_0] bigTab:scale-x-95 bigTab:w-sp-x1 laptop:scale-x-125 desktop:!bg-[-4630px_0] desktop:scale-x-90 desktop:w-sprite"></span>

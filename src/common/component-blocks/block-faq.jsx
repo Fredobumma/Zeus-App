@@ -1,19 +1,21 @@
 import React from "react";
+import Header from "../header";
 import FaqCollapsible from "../faqCollapsible";
 
 const Faq = ({ ...rest }) => {
   return (
     <section className="pb-8 pt-12 gap-x-8 grid tablet:grid-cols-2 tablet:pb-4 tablet:pt-16 laptop:gap-x-0 laptop:grid-cols-faq laptop:pb-8 laptop:pt-20">
-      <header className="max-w-90% mx-auto text-center tablet:mx-0 tablet:text-start">
-        <h2 className="font-bold tablet:leading-[56px] text-3xl tablet:text-40 laptop:text-5xl tablet:text-start">
-          Frequently Asked Questions
-        </h2>
-        <p className="mb-8 mt-2 text-secondary text-sm tablet:text-base tablet:mb-12 tablet:mt-4 laptop:mb-16">
-          Risus commodo id odio turpis pharetra elementum. Pulvinar porta porta
-          feugiat scelerisque in elit. Morbi rhoncus, tellus, eros consequat
-          magna semper orci a tincidunt.
-        </p>
-      </header>
+      <Header
+        header="max-w-90% mx-auto text-center tablet:mx-0 tablet:text-start"
+        type="h2"
+        heading="Frequently Asked Questions"
+        headingClasses="font-bold tablet:leading-[56px] text-3xl tablet:text-40 laptop:text-5xl tablet:text-start"
+        text="Risus commodo id odio turpis pharetra elementum. Pulvinar porta porta
+        feugiat scelerisque in elit. Morbi rhoncus, tellus, eros consequat
+        magna semper orci a tincidunt."
+        textClasses="mb-8 mt-2 text-secondary text-sm tablet:text-base tablet:mb-12 tablet:mt-4 laptop:mb-16"
+      />
+
       <div className="grid laptop:grid-cols-2 laptop:gap-x-8">
         <FaqCollapsible text="How much does Zeus UI cost?" {...rest} />
         <FaqCollapsible text="Can I resell Zeus UI?" {...rest} />

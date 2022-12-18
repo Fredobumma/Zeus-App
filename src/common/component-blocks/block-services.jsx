@@ -1,19 +1,20 @@
 import React from "react";
+import Header from "../header";
 import { SVG } from "../svg";
 
 const OurServices = () => {
   return (
     <section className="py-12 tablet:py-16 laptop:py-20">
-      <header className="max-w-80% mx-auto text-center bigTab:max-w-700 laptop:max-w-80%">
-        <h2 className="font-bold tablet:leading-[56px] text-3xl tablet:text-40 laptop:text-5xl">
-          We Provide
-        </h2>
-        <p className="mb-8 mt-2 text-secondary text-sm tablet:mb-16 tablet:mt-4 tablet:text-base laptop:mb-20">
-          Risus commodo id odio turpis pharetra elementum. Pulvinar porta porta
-          feugiat scelerisque in elit. Morbi rhoncus, tellus, eros consequat
-          magna semper orci a tincidunt.
-        </p>
-      </header>
+      <Header
+        header="max-w-80% mx-auto text-center bigTab:max-w-700 laptop:max-w-80%"
+        type="h2"
+        heading="We Provide"
+        headingClasses="font-bold tablet:leading-[56px] text-3xl tablet:text-40 laptop:text-5xl"
+        text="Risus commodo id odio turpis pharetra elementum. Pulvinar porta porta
+        feugiat scelerisque in elit. Morbi rhoncus, tellus, eros consequat
+        magna semper orci a tincidunt."
+        textClasses="mb-8 mt-2 text-secondary text-sm tablet:mb-16 tablet:mt-4 tablet:text-base laptop:mb-20"
+      />
       <div className="gap-6 grid text-center tablet:grid-cols-2 laptop:grid-cols-4 desktop:gap-8">
         <div className="inline-flex items-center flex-col h-auto">
           <SVG id="host"></SVG>
