@@ -7,7 +7,7 @@ const Showcase = () => {
         <h2 className="font-bold tablet:leading-[56px] text-3xl tablet:text-40 laptop:text-5xl">
           Hottest Collections
         </h2>
-        <p className="mb-8 mt-2 text-sm tablet:text-base tablet:mb-12 tablet:mt-4 laptop:mb-16">
+        <p className="mb-8 mt-2 text-secondary text-sm tablet:text-base tablet:mb-12 tablet:mt-4 laptop:mb-16">
           Ante ornare dictum dignissim erat natoque. Platea neque facilisis diam
           id venenatis. Ultrices dolor, ac vel consectetur. Gravida lobortis
           venenatis faucibus sed ipsum. Urna.
@@ -19,7 +19,7 @@ const Showcase = () => {
           <h3 className="font-semibold mb-3 mt-4 text-2xl laptop:text-32">
             Moonbirds
           </h3>
-          <p className="max-w-80% mb-6 text-center text-xs tablet:max-w-90% tablet:text-sm">
+          <p className="max-w-80% mb-6 text-center text-secondary text-xs tablet:max-w-90% tablet:text-sm">
             Faucibus odio elementum nulla venenatis, libero. Ullamcorper duis
             fringilla pulvinar nibh diam sit.
           </p>
@@ -29,7 +29,7 @@ const Showcase = () => {
           <h3 className="font-semibold mb-3 mt-4 text-2xl laptop:text-32">
             Clone X - X Takashi Murakami
           </h3>
-          <p className="max-w-80% mb-6 text-center text-xs tablet:max-w-90% tablet:text-sm">
+          <p className="max-w-80% mb-6 text-center text-secondary text-xs tablet:max-w-90% tablet:text-sm">
             Magna in condimentum praesent pretium vitae mattis facilisis nunc.
             Lectus in ac ac.
           </p>
@@ -39,7 +39,7 @@ const Showcase = () => {
           <h3 className="font-semibold mb-3 mt-4 text-2xl laptop:text-32">
             Mutant Ape Yacht Club
           </h3>
-          <p className="max-w-80% mb-6 text-center text-xs tablet:max-w-90% tablet:text-sm">
+          <p className="max-w-80% mb-6 text-center text-secondary text-xs tablet:max-w-90% tablet:text-sm">
             Sit aenean porttitor sit lectus. Adipiscing egestas etiam eget
             cursus nulla risus euismod. Netus.
           </p>
@@ -49,7 +49,7 @@ const Showcase = () => {
           <h3 className="font-semibold mb-3 mt-4 text-2xl laptop:text-32">
             "MOAR" by Joan Cornella
           </h3>
-          <p className="max-w-80% mb-6 text-center text-xs tablet:max-w-90% tablet:text-sm">
+          <p className="max-w-80% mb-6 text-center text-secondary text-xs tablet:max-w-90% tablet:text-sm">
             Faucibus odio elementum nulla venenatis, libero. Ullamcorper duis
             fringilla pulvinar nibh diam sit.
           </p>
@@ -59,7 +59,7 @@ const Showcase = () => {
           <h3 className="font-semibold mb-3 mt-4 text-2xl laptop:text-32">
             Doodles
           </h3>
-          <p className="max-w-80% mb-6 text-center text-xs tablet:max-w-90% tablet:text-sm">
+          <p className="max-w-80% mb-6 text-center text-secondary text-xs tablet:max-w-90% tablet:text-sm">
             Magna in condimentum praesent pretium vitae mattis facilisis nunc.
             Lectus in ac ac.
           </p>
@@ -69,7 +69,7 @@ const Showcase = () => {
           <h3 className="font-semibold mb-3 mt-4 text-2xl laptop:text-32">
             KIWAMI Genesis
           </h3>
-          <p className="max-w-80% mb-6 text-center text-xs tablet:max-w-90% tablet:text-sm">
+          <p className="max-w-80% mb-6 text-center text-secondary text-xs tablet:max-w-90% tablet:text-sm">
             Sit aenean porttitor sit lectus. Adipiscing egestas etiam eget
             cursus nulla risus euismod. Netus.
           </p>
@@ -79,7 +79,7 @@ const Showcase = () => {
           <h3 className="font-semibold mb-3 mt-4 text-2xl laptop:text-32">
             Arcade Land
           </h3>
-          <p className="max-w-80% mb-6 text-center text-xs tablet:max-w-90% tablet:text-sm">
+          <p className="max-w-80% mb-6 text-center text-secondary text-xs tablet:max-w-90% tablet:text-sm">
             Sit aenean porttitor sit lectus. Adipiscing egestas etiam eget
             cursus nulla risus euismod. Netus.
           </p>
@@ -89,7 +89,7 @@ const Showcase = () => {
           <h3 className="font-semibold mb-3 mt-4 text-2xl laptop:text-32">
             Goons of Balatroon
           </h3>
-          <p className="max-w-80% mb-6 text-center text-xs tablet:max-w-90% tablet:text-sm">
+          <p className="max-w-80% mb-6 text-center text-secondary text-xs tablet:max-w-90% tablet:text-sm">
             Magna in condimentum praesent pretium vitae mattis facilisis nunc.
             Lectus in ac ac.
           </p>
@@ -99,7 +99,7 @@ const Showcase = () => {
           <h3 className="font-semibold mb-3 mt-4 text-2xl laptop:text-32">
             Meta Toy DragonZ
           </h3>
-          <p className="max-w-80% mb-6 text-center text-xs tablet:max-w-90% tablet:text-sm">
+          <p className="max-w-80% mb-6 text-center text-secondary text-xs tablet:max-w-90% tablet:text-sm">
             Faucibus odio elementum nulla venenatis, libero. Ullamcorper duis
             fringilla pulvinar nibh diam sit.
           </p>

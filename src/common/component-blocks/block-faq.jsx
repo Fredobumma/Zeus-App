@@ -8,7 +8,7 @@ const Faq = ({ ...rest }) => {
         <h2 className="font-bold tablet:leading-[56px] text-3xl tablet:text-40 laptop:text-5xl tablet:text-start">
           Frequently Asked Questions
         </h2>
-        <p className="mb-8 mt-2 text-sm tablet:text-base tablet:mb-12 tablet:mt-4 laptop:mb-16">
+        <p className="mb-8 mt-2 text-secondary text-sm tablet:text-base tablet:mb-12 tablet:mt-4 laptop:mb-16">
           Risus commodo id odio turpis pharetra elementum. Pulvinar porta porta
           feugiat scelerisque in elit. Morbi rhoncus, tellus, eros consequat
           magna semper orci a tincidunt.

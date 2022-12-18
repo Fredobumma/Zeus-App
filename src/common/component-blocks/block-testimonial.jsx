@@ -21,7 +21,7 @@ const Testimonials = () => {
                 </p>
               </div>
             </div>
-            <p>
+            <p className="text-secondary">
               Sit ut diam bibendum dolor. Ullamcorper pharetra nibh eget vitae
               pulvinar. Placerat sapien, dolor, aenean vivamus in tincidunt et.
               Mauris dolor vestibulum et lacus a ante orci.
@@ -39,7 +39,7 @@ const Testimonials = () => {
                 </p>
               </div>
             </div>
-            <p>
+            <p className="text-secondary">
               Eu eu eget lorem commodo sagittis enim in viverra. Urna egestas
               ipsum gravida tempor. Libero, consectetur urna in enim magnis.
               Est.
@@ -57,7 +57,7 @@ const Testimonials = () => {
                 </p>
               </div>
             </div>
-            <p>
+            <p className="text-secondary">
               Lectus dolor fermentum gravida ut sit vel. Enim. Lorem ipsum will
               never be the same again so purchase Zeus UI now or web trying.
             </p>
@@ -74,7 +74,7 @@ const Testimonials = () => {
                 </p>
               </div>
             </div>
-            <p>
+            <p className="text-secondary">
               Eu luctus tincidunt vulputate praesent interdum proin. Magna
               gravida at pretium vitae. Viverra.
             </p>
@@ -91,7 +91,7 @@ const Testimonials = () => {
                 </p>
               </div>
             </div>
-            <p>
+            <p className="text-secondary">
               Amet aliquam, volutpat nisl, duis sed at. Vehicula proin
               consectetur risus dictumst nec amet consequat at tempus. Ornare
               dapibus nunc fames nibh morbi viverra eu sed mattis.{" "}
@@ -109,7 +109,7 @@ const Testimonials = () => {
                 </p>
               </div>
             </div>
-            <p>
+            <p className="text-secondary">
               Varius bibendum quis ipsum sit. Enim ante donec erat neque semper.
               Consectetur sed imperdiet tortor duis nulla aliquet at integer.{" "}
             </p>
@@ -126,7 +126,7 @@ const Testimonials = () => {
                 </p>
               </div>
             </div>
-            <p>
+            <p className="text-secondary">
               Amet quam velit nisl et et. Fusce ante facilisi vulputate eget
               aliquet mi sem eu vulputate.
             </p>
@@ -143,7 +143,7 @@ const Testimonials = () => {
                 </p>
               </div>
             </div>
-            <p>
+            <p className="text-secondary">
               This is the original component. Edit me to make global changes to
               all. 🎉
             </p>
@@ -160,7 +160,9 @@ const Testimonials = () => {
                 </p>
               </div>
             </div>
-            <p>Imperdiet sed tellus tempor vitae elit a. Arcu a.</p>
+            <p className="text-secondary">
+              Imperdiet sed tellus tempor vitae elit a. Arcu a.
+            </p>
           </div>
           <div className="h-fit max-w-[30%] p-4 rounded-lg shadow-custom1 bigTab:p-4 desktop:p-6">
             <div className="inline-flex items-center">
@@ -174,7 +176,9 @@ const Testimonials = () => {
                 </p>
               </div>
             </div>
-            <p>Lectus dolor fermentum gravida ut sit vel. Enim.</p>
+            <p className="text-secondary">
+              Lectus dolor fermentum gravida ut sit vel. Enim.
+            </p>
           </div>
           <div className="h-fit max-w-[30%] p-4 rounded-lg shadow-custom1 bigTab:p-4 desktop:p-6">
             <div className="inline-flex items-center">
@@ -188,7 +192,9 @@ const Testimonials = () => {
                 </p>
               </div>
             </div>
-            <p>Lectus dolor fermentum gravida ut sit vel. Enim.</p>
+            <p className="text-secondary">
+              Lectus dolor fermentum gravida ut sit vel. Enim.
+            </p>
           </div>
           <div className="h-fit max-w-[30%] p-4 rounded-lg shadow-custom1 bigTab:p-4 desktop:p-6">
             <div className="inline-flex items-center">
@@ -202,7 +208,7 @@ const Testimonials = () => {
                 </p>
               </div>
             </div>
-            <p>
+            <p className="text-secondary">
               Tempus nunc, ultricies etiam purus rhoncus vestibulum arcu morbi
               amet. Nam adipiscing.
             </p>

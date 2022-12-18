@@ -11,7 +11,7 @@ const Callout = () => {
       <h2 className="text-3xl bigTab:max-w-400 laptop:max-w-700 desktop:text-5xl">
         Ready to sell your NFTs?
       </h2>
-      <p className="max-w-[600px] mb-4 mt-2 mx-auto text-xs tablet:mt-4 tablet:mb-6 bigTab:max-w-400 laptop:max-w-700 desktop:mb-8 desktop:text-base">
+      <p className="max-w-[600px] mb-4 mt-2 mx-auto text-secondary text-xs tablet:mt-4 tablet:mb-6 bigTab:max-w-400 laptop:max-w-700 desktop:mb-8 desktop:text-base">
         Risus commodo id odio turpis pharetra elementum. Pulvinar porta porta
         feugiat scelerisque in elit. Morbi rhoncus, tellus, eros consequat magna
         semper orci a tincidunt.

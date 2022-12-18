@@ -8,7 +8,7 @@ const OurServices = () => {
         <h2 className="font-bold tablet:leading-[56px] text-3xl tablet:text-40 laptop:text-5xl">
           We Provide
         </h2>
-        <p className="mb-8 mt-2 text-sm tablet:mb-16 tablet:mt-4 tablet:text-base laptop:mb-20">
+        <p className="mb-8 mt-2 text-secondary text-sm tablet:mb-16 tablet:mt-4 tablet:text-base laptop:mb-20">
           Risus commodo id odio turpis pharetra elementum. Pulvinar porta porta
           feugiat scelerisque in elit. Morbi rhoncus, tellus, eros consequat
           magna semper orci a tincidunt.
@@ -20,7 +20,7 @@ const OurServices = () => {
           <p className="font-bold text-xl tablet:text-28 my-2 tablet:my-3">
             Host your NFTs
           </p>
-          <p className="font-light text-xs tablet:text-sm">
+          <p className="font-light text-secondary text-xs tablet:text-sm">
             Egestas tellus nunc proin amet tellus tincidunt lacus consequat.
             Ultrices
           </p>
@@ -30,7 +30,7 @@ const OurServices = () => {
           <p className="font-bold text-xl tablet:text-28 my-2 tablet:my-3">
             See your sales
           </p>
-          <p className="font-light text-xs tablet:text-sm">
+          <p className="font-light text-secondary text-xs tablet:text-sm">
             Integer ante non nunc, eget est justo vel semper nunc. Lacus
           </p>
         </div>
@@ -39,7 +39,7 @@ const OurServices = () => {
           <p className="font-bold text-xl tablet:text-28 my-2 tablet:my-3">
             Secure wallet
           </p>
-          <p className="font-light text-xs tablet:text-sm">
+          <p className="font-light text-secondary text-xs tablet:text-sm">
             Sed faucibus faucibus egestas volutpat, accumsan adipiscing egestas
             est. Auctor et leo urna est.
           </p>
@@ -49,7 +49,7 @@ const OurServices = () => {
           <p className="font-bold text-xl tablet:text-28 my-2 tablet:my-3">
             No scam
           </p>
-          <p className="font-light text-xs tablet:text-sm">
+          <p className="font-light text-secondary text-xs tablet:text-sm">
             Integer ante non nunc, eget est justo vel semper nunc. Lacus
           </p>
         </div>
