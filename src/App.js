@@ -3,6 +3,7 @@ import { useState } from "react";
 import { SVGSource } from "./common/svg";
 import Navbar from "./common/component-blocks/navbar";
 import Hero from "./common/component-blocks/block-hero";
+import Sponsors from "./common/component-blocks/block-brands";
 import Showcase from "./common/component-blocks/block-showcase";
 import Executives from "./common/component-blocks/block-executives";
 import OurServices from "./common/component-blocks/block-services";
@@ -45,6 +46,7 @@ function App() {
         toggleSubMenu={handleSubMenuIcon}
       />
       <Hero />
+      <Sponsors />
       <Showcase />
       <Executives />
       <OurServices />
