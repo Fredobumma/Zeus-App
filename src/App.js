@@ -17,7 +17,8 @@ function App() {
   const [collapsible, setCollapsible] = useState([]);
   const [menuIcon, setMenuIcon] = useState(false);
   const [subMenuIcon, setSubMenuIcon] = useState(false);
-  const { width } = useWindowDimensions(false);
+  const [footerExtension, setFooterExtension] = useState(false);
+  const { width } = useWindowDimensions();
 
   const handleCollapsible = (id) => {
     const clonedArray = [...collapsible];
@@ -27,13 +28,8 @@ function App() {
     setCollapsible(clonedArray);
   };
 
-  const handleMenuIcon = () => {
-    setMenuIcon(!menuIcon);
-  };
-
-  const handleSubMenuIcon = () => {
-    setSubMenuIcon(!subMenuIcon);
-  };
+  const handleMenuIcon = () => setMenuIcon(!menuIcon);
+  const handleSubMenuIcon = () => setSubMenuIcon(!subMenuIcon);
 
   return (
     <main className="mx-auto">
@@ -53,7 +49,11 @@ function App() {
       <Testimonials />
       <Faq collapsible={collapsible} handleCollapse={handleCollapsible} />
       <Callout />
-      <Footer screenWidth={width} />
+      <Footer
+        screenWidth={width}
+        footerExtension={footerExtension}
+        toggleExtension={() => setFooterExtension(!footerExtension)}
+      />
     </main>
   );
 }
