@@ -3,6 +3,17 @@ import Header from "../header";
 import FaqCollapsible from "../faqCollapsible";
 
 const Faq = ({ ...rest }) => {
+  const questions = [
+    "How much does Zeus UI cost?",
+    "Can I resell Zeus UI?",
+    "What kind of websites I can build with Zeus UI?",
+    "How long will you support Zeus UI?",
+    "Can I use Zeus UI in commercial projects?",
+    "Could you make me a website using Zeus UI?",
+    "Is that easy to design a website with Zeus UI?",
+    "What makes Zeus UI literally the best Web UI kit in the Internet?",
+  ];
+
   return (
     <section className="pb-8 pt-12 gap-x-8 grid tablet:grid-cols-2 tablet:pb-4 tablet:pt-16 laptop:gap-x-0 laptop:grid-cols-faq laptop:pb-8 laptop:pt-20">
       <Header
@@ -15,31 +26,10 @@ const Faq = ({ ...rest }) => {
         magna semper orci a tincidunt."
         textClasses="mb-8 mt-2 text-secondary text-sm tablet:text-base tablet:mb-12 tablet:mt-4 laptop:mb-16"
       />
-
       <div className="grid laptop:grid-cols-2 laptop:gap-x-8">
-        <FaqCollapsible text="How much does Zeus UI cost?" {...rest} />
-        <FaqCollapsible text="Can I resell Zeus UI?" {...rest} />
-        <FaqCollapsible
-          text="What kind of websites I can build with Zeus UI?"
-          {...rest}
-        />
-        <FaqCollapsible text="How long will you support Zeus UI?" {...rest} />
-        <FaqCollapsible
-          text="Can I use Zeus UI in commercial projects?"
-          {...rest}
-        />
-        <FaqCollapsible
-          text="Could you make me a website using Zeus UI?"
-          {...rest}
-        />
-        <FaqCollapsible
-          text="Is that easy to design a website with Zeus UI?"
-          {...rest}
-        />
-        <FaqCollapsible
-          text="What makes Zeus UI literally the best Web UI kit in the Internet?"
-          {...rest}
-        />
+        {questions.map((text, index) => (
+          <FaqCollapsible key={index} text={text} {...rest} />
+        ))}
       </div>
     </section>
   );
