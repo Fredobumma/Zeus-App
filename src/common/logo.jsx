@@ -1,10 +1,10 @@
 import React from "react";
 import { SVG } from "./svg";
 
-const Logo = ({ classes }) => {
+const Logo = ({ id, classes }) => {
   return (
     <span className={classes}>
-      <SVG id="logo" height="100%" width="100%" />
+      <SVG id={id} height="100%" width="100%" />
     </span>
   );
 };

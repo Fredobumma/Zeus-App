@@ -48,7 +48,10 @@ const WiderView = ({
           ))}
         </ul>
       </span>
-      <Logo classes="absolute h-10 inset-0 justify-center mt-1 mx-auto w-150" />
+      <Logo
+        id="logo"
+        classes="absolute h-10 inset-0 justify-center mt-1 mx-auto w-150"
+      />
     </div>
   );
 };
