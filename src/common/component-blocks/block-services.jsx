@@ -3,6 +3,29 @@ import Header from "../header";
 import { SVG } from "../svg";
 
 const OurServices = () => {
+  const services = [
+    {
+      id: "host",
+      title: "Host your NFTs",
+      text: "Egestas tellus nunc proin amet tellus tincidunt lacus consequat. Ultrices",
+    },
+    {
+      id: "sales",
+      title: "See your sales",
+      text: "Integer ante non nunc, eget est justo vel semper nunc. Lacus",
+    },
+    {
+      id: "secure",
+      title: "Secure wallet",
+      text: "Sed faucibus faucibus egestas volutpat, accumsan adipiscing egestas est. Auctor et leo urna est.",
+    },
+    {
+      id: "scam",
+      title: "No scam",
+      text: "Integer ante non nunc, eget est justo vel semper nunc. Lacus",
+    },
+  ];
+
   return (
     <section className="py-12 tablet:py-16 laptop:py-20">
       <Header
@@ -16,44 +39,17 @@ const OurServices = () => {
         textClasses="mb-8 mt-2 text-secondary text-sm tablet:mb-16 tablet:mt-4 tablet:text-base laptop:mb-20"
       />
       <div className="gap-6 grid text-center tablet:grid-cols-2 laptop:grid-cols-4 desktop:gap-8">
-        <div className="inline-flex items-center flex-col h-auto">
-          <SVG id="host"></SVG>
-          <p className="font-bold text-xl tablet:text-28 my-2 tablet:my-3">
-            Host your NFTs
-          </p>
-          <p className="font-light text-secondary text-xs tablet:text-sm">
-            Egestas tellus nunc proin amet tellus tincidunt lacus consequat.
-            Ultrices
-          </p>
-        </div>
-        <div className="inline-flex items-center flex-col h-auto">
-          <SVG id="sales"></SVG>
-          <p className="font-bold text-xl tablet:text-28 my-2 tablet:my-3">
-            See your sales
-          </p>
-          <p className="font-light text-secondary text-xs tablet:text-sm">
-            Integer ante non nunc, eget est justo vel semper nunc. Lacus
-          </p>
-        </div>
-        <div className="inline-flex items-center flex-col h-auto">
-          <SVG id="secure"></SVG>
-          <p className="font-bold text-xl tablet:text-28 my-2 tablet:my-3">
-            Secure wallet
-          </p>
-          <p className="font-light text-secondary text-xs tablet:text-sm">
-            Sed faucibus faucibus egestas volutpat, accumsan adipiscing egestas
-            est. Auctor et leo urna est.
-          </p>
-        </div>
-        <div className="inline-flex items-center flex-col h-auto">
-          <SVG id="scam"></SVG>
-          <p className="font-bold text-xl tablet:text-28 my-2 tablet:my-3">
-            No scam
-          </p>
-          <p className="font-light text-secondary text-xs tablet:text-sm">
-            Integer ante non nunc, eget est justo vel semper nunc. Lacus
-          </p>
-        </div>
+        {services.map(({ id, title, text }, index) => (
+          <div key={index} className="inline-flex items-center flex-col h-auto">
+            <SVG id={id}></SVG>
+            <p className="font-bold text-xl tablet:text-28 my-2 tablet:my-3">
+              {title}
+            </p>
+            <p className="font-light text-secondary text-xs tablet:text-sm">
+              {text}
+            </p>
+          </div>
+        ))}
       </div>
     </section>
   );
