@@ -1,18 +1,12 @@
 import React from "react";
 
-const DropDown = ({ mobileLinks }) => {
+const DropDown = ({ items, wrapperClasses, listClasses, linkClasses }) => {
   return (
-    <span className="absolute bg-gray-100 font-normal bottom-[150%] inset-x-0 mt-2 mx-auto rounded shadow text-center">
-      <ul
-        className="py-1 text-sm text-secondary"
-        aria-labelledby="dropdownLargeButton"
-      >
-        {mobileLinks.map((link, index) => (
+    <span className={wrapperClasses}>
+      <ul className={listClasses} aria-labelledby="dropdownLargeButton">
+        {items.map((link, index) => (
           <li key={index}>
-            <a
-              href="#empty"
-              className="active:text-white active:bg-secondary block focus:bg-white focus:font-medium hover:bg-white hover:font-semibold outline-0 px-4 py-2"
-            >
+            <a href="#empty" className={linkClasses}>
               {link}
             </a>
           </li>

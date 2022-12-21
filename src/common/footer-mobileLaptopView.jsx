@@ -34,7 +34,12 @@ const MobileLaptopView = ({
                 <Toggler toggle={footerExtension} open="up" close="down" />
               )}
               {more(link) && footerExtension && (
-                <DropDown mobileLinks={mobileLinks} />
+                <DropDown
+                  items={mobileLinks}
+                  wrapperClasses="absolute bg-gray-100 font-normal bottom-[150%] inset-x-0 mt-2 mx-auto rounded shadow text-center"
+                  listClasses="py-1 text-sm text-secondary"
+                  linkClasses="active:text-white active:bg-secondary block focus:bg-white focus:font-medium hover:bg-white hover:font-semibold outline-0 px-4 py-2"
+                />
               )}
             </a>
           </li>
