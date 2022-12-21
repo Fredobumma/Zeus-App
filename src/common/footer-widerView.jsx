@@ -2,14 +2,16 @@ import React from "react";
 import Toggler from "./toggler";
 import DropDown from "./dropDown";
 import Logo from "./logo";
+import { addToggler } from "./../utilities/addToggler";
 
 const WiderView = ({
   mobileLinks,
   widerScreenLinks,
   footerExtension,
-  more,
   toggleExtension,
 }) => {
+  const more = (link) => addToggler(link, widerScreenLinks[0]);
+
   return (
     <div className="border-b border-line flex justify-between pb-10 relative">
       <span className="py-3">
@@ -37,18 +39,20 @@ const WiderView = ({
                 className="flex focus:opacity-100 focus:text-secondary hover:opacity-100 hover:text-secondary font-medium opacity-50 px-6"
               >
                 {link}
-                {more(link) && (
-                  <Toggler toggle={footerExtension} open="up" close="down" />
-                )}
-                {more(link) && footerExtension && (
-                  <DropDown
-                    items={mobileLinks}
-                    wrapperClasses="absolute bg-gray-100 font-normal bottom-[150%] inset-x-0 mt-2 mx-auto rounded shadow text-center"
-                    listClasses="py-1 text-sm text-secondary"
-                    linkClasses="active:text-white active:bg-secondary block focus:bg-white focus:font-medium hover:bg-white hover:font-semibold outline-0 px-4 py-2"
-                  />
-                )}
+                <Toggler
+                  toggle={footerExtension}
+                  open="up"
+                  close="down"
+                  isVisible={more(link)}
+                />
               </a>
+              {more(link) && footerExtension && (
+                <DropDown
+                  items={mobileLinks}
+                  wrapperClasses="absolute bg-gray-100 font-normal bottom-[150%] inset-x-0 mt-2 mx-auto rounded shadow text-center"
+                  linkClasses="focus:bg-white hover:bg-white"
+                />
+              )}
             </li>
           ))}
         </ul>

@@ -19,7 +19,6 @@ const Footer = ({ footerExtension, screenWidth, toggleExtension }) => {
     "Privacy Policy",
     "Terms & Conditions",
   ];
-  const more = (target) => target === widerScreenLinks[0];
 
   return (
     <div className="pb-8 pt-12 tablete:pt-16 laptop:pb-10 laptop:pt-20">
@@ -28,7 +27,6 @@ const Footer = ({ footerExtension, screenWidth, toggleExtension }) => {
           mobileLinks={mobileLinks}
           widerScreenLinks={widerScreenLinks}
           footerExtension={footerExtension}
-          more={more}
           toggleExtension={toggleExtension}
         />
       ) : (
@@ -36,7 +34,6 @@ const Footer = ({ footerExtension, screenWidth, toggleExtension }) => {
           mobileLinks={mobileLinks}
           widerScreenLinks={widerScreenLinks}
           footerExtension={footerExtension}
-          more={more}
           toggleExtension={toggleExtension}
         />
       )}

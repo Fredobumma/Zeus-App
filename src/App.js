@@ -28,9 +28,6 @@ function App() {
     setCollapsible(clonedArray);
   };
 
-  const handleMenuIcon = () => setMenuIcon(!menuIcon);
-  const handleSubMenuIcon = () => setSubMenuIcon(!subMenuIcon);
-
   return (
     <main className="mx-auto">
       <SVGSource />
@@ -38,8 +35,8 @@ function App() {
         menuIcon={menuIcon}
         screenWidth={width}
         subMenuIcon={subMenuIcon}
-        toggleMenu={handleMenuIcon}
-        toggleSubMenu={handleSubMenuIcon}
+        toggleMenu={() => setMenuIcon(!menuIcon)}
+        toggleSubMenu={() => setSubMenuIcon(!subMenuIcon)}
       />
       <Hero />
       <Sponsors />

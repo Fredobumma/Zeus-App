@@ -2,14 +2,16 @@ import React from "react";
 import Logo from "./logo";
 import Toggler from "./toggler";
 import DropDown from "./dropDown";
+import { addToggler } from "./../utilities/addToggler";
 
 const MobileLaptopView = ({
   mobileLinks,
   widerScreenLinks,
   footerExtension,
-  more,
   toggleExtension,
 }) => {
+  const more = (link) => addToggler(link, widerScreenLinks[0]);
+
   return (
     <div className="border-line flex flex-col items-center justify-center laptop:flex-row laptop:border-b laptop:justify-between laptop:pb-10">
       <Logo id="logo" classes="inline-block h-10 mx-auto w-150 laptop:mx-0" />
@@ -30,18 +32,20 @@ const MobileLaptopView = ({
               }`}
             >
               {link}
-              {more(link) && (
-                <Toggler toggle={footerExtension} open="up" close="down" />
-              )}
-              {more(link) && footerExtension && (
-                <DropDown
-                  items={mobileLinks}
-                  wrapperClasses="absolute bg-gray-100 font-normal bottom-[150%] inset-x-0 mt-2 mx-auto rounded shadow text-center"
-                  listClasses="py-1 text-sm text-secondary"
-                  linkClasses="active:text-white active:bg-secondary block focus:bg-white focus:font-medium hover:bg-white hover:font-semibold outline-0 px-4 py-2"
-                />
-              )}
+              <Toggler
+                toggle={footerExtension}
+                open="up"
+                close="down"
+                isVisible={more(link)}
+              />
             </a>
+            {more(link) && footerExtension && (
+              <DropDown
+                items={mobileLinks}
+                wrapperClasses="absolute bg-gray-100 font-normal bottom-[150%] inset-x-0 mt-2 mx-auto rounded shadow text-center"
+                linkClasses="focus:bg-white hover:bg-white"
+              />
+            )}
           </li>
         ))}
       </ul>
