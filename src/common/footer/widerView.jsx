@@ -1,8 +1,8 @@
 import React from "react";
-import Toggler from "./toggler";
-import DropDown from "./dropDown";
-import Logo from "./logo";
-import { addToggler } from "./../utilities/addToggler";
+import Toggler from "../toggler";
+import DropDown from "../dropDown";
+import Logo from "../logo";
+import { addToggler } from "../../utilities/addToggler";
 
 const WiderView = ({
   mobileLinks,

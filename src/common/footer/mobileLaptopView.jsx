@@ -1,8 +1,8 @@
 import React from "react";
-import Logo from "./logo";
-import Toggler from "./toggler";
-import DropDown from "./dropDown";
-import { addToggler } from "./../utilities/addToggler";
+import Logo from "../logo";
+import Toggler from "../toggler";
+import DropDown from "../dropDown";
+import { addToggler } from "../../utilities/addToggler";
 
 const MobileLaptopView = ({
   mobileLinks,
@@ -15,7 +15,7 @@ const MobileLaptopView = ({
   return (
     <div className="border-line flex flex-col items-center justify-center laptop:flex-row laptop:border-b laptop:justify-between laptop:pb-10">
       <Logo id="logo" classes="inline-block h-10 mx-auto w-150 laptop:mx-0" />
-      <ul className="border-b border-t border-line flex flex-wrap gap-y-4 items-center justify-center mt-8 py-5 laptop:border-b-0 laptop:border-t-0 laptop:flex-row-reverse laptop:mt-0 laptop:py-0">
+      <ul className="border-b border-t border-line flex flex-wrap gap-y-6 items-center justify-center mt-8 py-8 laptop:border-b-0 laptop:border-t-0 laptop:flex-row-reverse laptop:mt-0 laptop:py-0">
         {mobileLinks.concat(widerScreenLinks).map((link, index) => (
           <li
             key={index}

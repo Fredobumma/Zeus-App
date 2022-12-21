@@ -1,6 +1,6 @@
 import React from "react";
-import WiderView from "../footer-widerView";
-import MobileLaptopView from "../footer-mobileLaptopView";
+import WiderView from "../footer/widerView";
+import MobileLaptopView from "../footer/mobileLaptopView";
 import CopyRight from "../copyright";
 
 const Footer = ({ footerExtension, screenWidth, toggleExtension }) => {
