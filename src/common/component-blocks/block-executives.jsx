@@ -2,6 +2,29 @@ import React from "react";
 import Header from "../header";
 
 const Executives = () => {
+  const team = [
+    {
+      fullName: "Guy Hawkins",
+      position: "CEO",
+      spriteImage: "guyHawkings-img !bg-[-1163px_0]",
+    },
+    {
+      fullName: "Jane Cooper",
+      position: "COO",
+      spriteImage: "jane-img !bg-[-1072px_0]",
+    },
+    {
+      fullName: "Darrell Stew",
+      position: "CTO",
+      spriteImage: "darrell-img !bg-[-981px_0]",
+    },
+    {
+      fullName: "Dia Russell",
+      position: "CDO",
+      spriteImage: "dianne-img !bg-[-890px_0]",
+    },
+  ];
+
   return (
     <section className="py-12 tablet:py-16 laptop:py-20">
       <Header
@@ -15,34 +38,15 @@ const Executives = () => {
         textClasses="mb-12 mt-2 text-secondary text-sm tablet:text-base tablet:mt-4 laptop:mb-16"
       />
       <div className="gap-4 grid grid-cols-2 text-center tablet:gap-6 tablet:grid-cols-4 laptop:gap-8">
-        <div className="inline-flex items-center flex-col h-auto">
-          <span className="sprite guyHawkings-img !bg-[-1163px_0] h-20 w-81"></span>
-          <p className="font-bold text-xl tablet:text-2xl my-2 tablet:my-3">
-            Guy Hawkins
-          </p>
-          <p className="font-light text-secondary text-sm">CEO</p>
-        </div>
-        <div className="inline-flex items-center flex-col h-auto">
-          <span className="sprite jane-img !bg-[-1072px_0] h-20 w-81"></span>
-          <p className="font-bold text-xl tablet:text-2xl my-2 tablet:my-3">
-            Jane Cooper
-          </p>
-          <p className="font-light text-secondary text-sm">COO</p>
-        </div>
-        <div className="inline-flex items-center flex-col h-auto">
-          <span className="sprite darrell-img !bg-[-981px_0] h-20 w-81"></span>
-          <p className="font-bold text-xl tablet:text-2xl my-2 tablet:my-3">
-            Darrell Stew
-          </p>
-          <p className="font-light text-secondary text-sm">CTO</p>
-        </div>
-        <div className="inline-flex items-center flex-col h-auto">
-          <span className="sprite dianne-img !bg-[-890px_0] h-20 w-81"></span>
-          <p className="font-bold text-xl tablet:text-2xl my-2 tablet:my-3">
-            Dia Russell
-          </p>
-          <p className="font-light text-secondary text-sm">CDO</p>
-        </div>
+        {team.map(({ fullName, position, spriteImage }) => (
+          <div className="inline-flex items-center flex-col h-auto">
+            <span className={`sprite ${spriteImage} h-20 w-81`}></span>
+            <p className="font-bold text-xl tablet:text-2xl my-2 tablet:my-3">
+              {fullName}
+            </p>
+            <p className="font-light text-secondary text-sm">{position}</p>
+          </div>
+        ))}
       </div>
     </section>
   );
