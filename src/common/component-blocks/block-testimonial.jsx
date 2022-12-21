@@ -1,4 +1,6 @@
 import React from "react";
+import Figure from "../figure";
+import ParagrapghText from "../paragrapghText";
 
 const Testimonials = () => {
   const testimonialCards = [
@@ -91,17 +93,19 @@ const Testimonials = () => {
                 className="h-fit max-w-[30%] p-4 rounded-lg shadow-custom1 bigTab:p-4 desktop:p-6"
               >
                 <div className="inline-flex items-center">
-                  <span className={`sprite ${spriteImage} h-16 w-16`}></span>
+                  <Figure classes={`sprite ${spriteImage} h-16 w-16`} />
                   <div>
-                    <p className="font-medium text-sm tablet:text-base tablet:leading-5">
-                      {fullName}
-                    </p>
-                    <p className="font-normal opacity-50 text-sm tablet:text-base">
-                      {userName}
-                    </p>
+                    <ParagrapghText
+                      classes="font-medium text-sm tablet:text-base tablet:leading-5"
+                      content={fullName}
+                    />
+                    <ParagrapghText
+                      classes="font-normal opacity-50 text-sm tablet:text-base"
+                      content={userName}
+                    />
                   </div>
                 </div>
-                <p className="text-secondary">{text}</p>
+                <ParagrapghText classes="text-secondary" content={text} />
               </div>
             )
           )}

@@ -1,5 +1,7 @@
 import React from "react";
 import Header from "../header";
+import Figure from "../figure";
+import ParagrapghText from "../paragrapghText";
 
 const Executives = () => {
   const team = [
@@ -38,13 +40,17 @@ const Executives = () => {
         textClasses="mb-12 mt-2 text-secondary text-sm tablet:text-base tablet:mt-4 laptop:mb-16"
       />
       <div className="gap-4 grid grid-cols-2 text-center tablet:gap-6 tablet:grid-cols-4 laptop:gap-8">
-        {team.map(({ fullName, position, spriteImage }) => (
-          <div className="inline-flex items-center flex-col h-auto">
-            <span className={`sprite ${spriteImage} h-20 w-81`}></span>
-            <p className="font-bold text-xl tablet:text-2xl my-2 tablet:my-3">
-              {fullName}
-            </p>
-            <p className="font-light text-secondary text-sm">{position}</p>
+        {team.map(({ fullName, position, spriteImage }, index) => (
+          <div key={index} className="inline-flex items-center flex-col h-auto">
+            <Figure classes={`sprite ${spriteImage} h-20 w-81`} />
+            <ParagrapghText
+              classes="font-bold text-xl tablet:text-2xl my-2 tablet:my-3"
+              content={fullName}
+            />
+            <ParagrapghText
+              classes="font-light text-secondary text-sm"
+              content={position}
+            />
           </div>
         ))}
       </div>
