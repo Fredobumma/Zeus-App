@@ -1,8 +1,8 @@
 import React from "react";
-import Logo from "../logo";
-import Toggler from "../toggler";
-import DropDown from "../dropDown";
-import { addToggler } from "../../utilities/addToggler";
+import Logo from "../../logo";
+import Toggler from "../../toggler";
+import DropDown from "../../dropDown";
+import { addToggler } from "../../../utilities/addToggler";
 
 const MobileLaptopView = ({
   mobileLinks,

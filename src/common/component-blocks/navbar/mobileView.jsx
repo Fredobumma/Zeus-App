@@ -1,8 +1,8 @@
 import React from "react";
-import DropDown from "../dropDown";
-import Toggler from "../toggler";
-import SignOut from "../signOut";
-import { addToggler } from "../../utilities/addToggler";
+import DropDown from "../../dropDown";
+import Toggler from "../../toggler";
+import SignOut from "../../signOut";
+import { addToggler } from "../../../utilities/addToggler";
 
 const MobileView = ({ navLinks, plansList, subMenuIcon, toggleSubMenu }) => {
   const isVisible = (link) => addToggler(link, "Plans");

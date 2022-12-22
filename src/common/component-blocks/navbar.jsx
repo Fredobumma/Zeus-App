@@ -1,6 +1,6 @@
 import React from "react";
-import MobileView from "../navbar/mobileView";
-import WiderScreens from "../navbar/widerScreens";
+import MobileView from "./navbar/mobileView";
+import WiderScreens from "./navbar/widerScreens";
 import HamburgerMenu from "../hamburgerMenu";
 import Logo from "../logo";
 
