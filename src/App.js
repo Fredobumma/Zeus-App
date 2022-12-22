@@ -8,6 +8,7 @@ import University from "./components/university";
 import Courses from "./components/courses";
 import UseCases from "./components/useCases";
 import Plans from "./components/plans";
+import Resources from "./components/resources";
 import useWindowDimensions from "./common/utilities/useWindowDimensions";
 
 function App() {
@@ -53,6 +54,7 @@ function App() {
           <Route path="/courses" element={<Courses />} />
           <Route path="/usecases" element={<UseCases />} />
           <Route path="/plans/*" element={<Plans />} />
+          <Route path="/resources" element={<Resources />} />
         </Routes>
       </main>
     </React.Fragment>
