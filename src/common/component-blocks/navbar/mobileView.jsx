@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import DropDown from "../../dropDown";
 import Toggler from "../../toggler";
 import SignOut from "../../signOut";
@@ -17,8 +18,8 @@ const MobileView = ({ navLinks, plansList, subMenuIcon, toggleSubMenu }) => {
             title={isVisible(link) ? "Click for more" : null}
             onClick={isVisible(link) ? toggleSubMenu : null}
           >
-            <a
-              href="#empty"
+            <Link
+              to={`/${link.replaceAll(" ", "")}`}
               className={`active:text-white active:bg-secondary block focus:bg-white focus:font-medium focus:text-secondary hover:bg-white hover:font-medium hover:text-secondary py-2 pl-3 pr-4 text-gray-700 rounded outline-0 ${
                 isVisible(link) && "flex items-center justify-between w-full"
               }`}
@@ -31,7 +32,7 @@ const MobileView = ({ navLinks, plansList, subMenuIcon, toggleSubMenu }) => {
                 close="down"
                 isVisible={isVisible(link)}
               />
-            </a>
+            </Link>
             {isVisible(link) && subMenuIcon && (
               <div
                 id="sub-navbar-dropdown"

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import DropDown from "../../dropDown";
 import Toggler from "../../toggler";
 import SignOut from "../../signOut";
@@ -29,8 +30,8 @@ const WiderScreens = ({ navLinks, plansList, subMenuIcon, toggleSubMenu }) => {
             title={isVisible(link) ? "Click for more" : null}
             onClick={isVisible(link) ? toggleSubMenu : null}
           >
-            <a
-              href="#empty"
+            <Link
+              to={`/${link.replaceAll(" ", "")}`}
               className={`active:opacity-100 active:text-secondary focus:opacity-100 focus:text-secondary hover:opacity-100 hover:text-secondary font-medium opacity-50 px-6 py-3 ${
                 isVisible(link) && "flex mt-[-12px]"
               }`}
@@ -42,7 +43,7 @@ const WiderScreens = ({ navLinks, plansList, subMenuIcon, toggleSubMenu }) => {
                 close="down"
                 isVisible={isVisible(link)}
               />
-            </a>
+            </Link>
             {isVisible(link) && subMenuIcon && (
               <span
                 id="sub-navbar-dropdown"

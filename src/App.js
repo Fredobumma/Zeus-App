@@ -1,16 +1,9 @@
 import React from "react";
 import { useState } from "react";
+import { Routes, Route } from "react-router-dom";
 import { SVGSource } from "./common/svg";
 import Navbar from "./common/component-blocks/navbar";
-import Hero from "./common/component-blocks/block-hero";
-import Sponsors from "./common/component-blocks/block-brands";
-import Showcase from "./common/component-blocks/block-showcase";
-import Executives from "./common/component-blocks/block-executives";
-import OurServices from "./common/component-blocks/block-services";
-import Testimonials from "./common/component-blocks/block-testimonial";
-import Faq from "./common/component-blocks/block-faq";
-import Callout from "./common/component-blocks/block-callout";
-import Footer from "./common/component-blocks/block-footer";
+import Home from "./components/home";
 import useWindowDimensions from "./common/utilities/useWindowDimensions";
 
 function App() {
@@ -29,7 +22,7 @@ function App() {
   };
 
   return (
-    <main className="mx-auto">
+    <React.Fragment>
       <SVGSource />
       <Navbar
         menuIcon={menuIcon}
@@ -38,20 +31,23 @@ function App() {
         toggleMenu={() => setMenuIcon(!menuIcon)}
         toggleSubMenu={() => setSubMenuIcon(!subMenuIcon)}
       />
-      <Hero />
-      <Sponsors />
-      <Showcase />
-      <Executives />
-      <OurServices />
-      <Testimonials />
-      <Faq collapsible={collapsible} handleCollapse={handleCollapsible} />
-      <Callout />
-      <Footer
-        screenWidth={width}
-        footerExtension={footerExtension}
-        toggleExtension={() => setFooterExtension(!footerExtension)}
-      />
-    </main>
+      <main className="mx-auto">
+        <Routes>
+          <Route
+            path="/home"
+            element={
+              <Home
+                collapsible={collapsible}
+                footerExtension={footerExtension}
+                width={width}
+                toggleExtension={() => setFooterExtension(!footerExtension)}
+                handleCollapsible={handleCollapsible}
+              />
+            }
+          />
+        </Routes>
+      </main>
+    </React.Fragment>
   );
 }
 
