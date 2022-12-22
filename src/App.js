@@ -6,8 +6,9 @@ import Navbar from "./common/component-blocks/navbar";
 import Home from "./components/home";
 import University from "./components/university";
 import Courses from "./components/courses";
-import useWindowDimensions from "./common/utilities/useWindowDimensions";
 import UseCases from "./components/useCases";
+import Plans from "./components/plans";
+import useWindowDimensions from "./common/utilities/useWindowDimensions";
 
 function App() {
   const [collapsible, setCollapsible] = useState([]);
@@ -51,6 +52,7 @@ function App() {
           <Route path="/university" element={<University />} />
           <Route path="/courses" element={<Courses />} />
           <Route path="/usecases" element={<UseCases />} />
+          <Route path="/plans/*" element={<Plans />} />
         </Routes>
       </main>
     </React.Fragment>

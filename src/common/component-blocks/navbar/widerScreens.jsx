@@ -31,7 +31,7 @@ const WiderScreens = ({ navLinks, plansList, subMenuIcon, toggleSubMenu }) => {
             onClick={isVisible(link) ? toggleSubMenu : null}
           >
             <Link
-              to={`/${link.replaceAll(" ", "")}`}
+              to={!isVisible(link) && `/${link.replaceAll(" ", "")}`}
               className={`active:opacity-100 active:text-secondary focus:opacity-100 focus:text-secondary hover:opacity-100 hover:text-secondary font-medium opacity-50 px-6 py-3 ${
                 isVisible(link) && "flex mt-[-12px]"
               }`}

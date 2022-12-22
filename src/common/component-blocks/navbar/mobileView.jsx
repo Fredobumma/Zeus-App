@@ -19,7 +19,7 @@ const MobileView = ({ navLinks, plansList, subMenuIcon, toggleSubMenu }) => {
             onClick={isVisible(link) ? toggleSubMenu : null}
           >
             <Link
-              to={`/${link.replaceAll(" ", "")}`}
+              to={!isVisible(link) && `/${link.replaceAll(" ", "")}`}
               className={`active:text-white active:bg-secondary block focus:bg-white focus:font-medium focus:text-secondary hover:bg-white hover:font-medium hover:text-secondary py-2 pl-3 pr-4 text-gray-700 rounded outline-0 ${
                 isVisible(link) && "flex items-center justify-between w-full"
               }`}
