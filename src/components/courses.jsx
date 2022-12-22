@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import Header from "../common/header";
 import ParagraphText from "../common/paragraphText";
 
-const University = () => {
+const Courses = () => {
   const { pathname } = useLocation();
   const title = pathname.slice(1);
 
@@ -80,4 +80,4 @@ const University = () => {
   );
 };
 
-export default University;
+export default Courses;
