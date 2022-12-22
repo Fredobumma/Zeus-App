@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../header";
-import ParagrapghText from "../paragrapghText";
+import ParagraphText from "../paragraphText";
 import { SVG } from "../svg";
 
 const OurServices = () => {
@@ -43,11 +43,11 @@ const OurServices = () => {
         {services.map(({ id, title, text }, index) => (
           <div key={index} className="inline-flex items-center flex-col h-auto">
             <SVG id={id}></SVG>
-            <ParagrapghText
+            <ParagraphText
               classes="font-bold text-xl tablet:text-28 my-2 tablet:my-3"
               content={title}
             />
-            <ParagrapghText
+            <ParagraphText
               classes="font-light text-secondary text-xs tablet:text-sm"
               content={text}
             />

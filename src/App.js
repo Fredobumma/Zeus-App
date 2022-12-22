@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import { SVGSource } from "./common/svg";
 import Navbar from "./common/component-blocks/navbar";
 import Home from "./components/home";
+import University from "./components/university";
 import useWindowDimensions from "./common/utilities/useWindowDimensions";
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
               />
             }
           />
+          <Route path="/university" element={<University />} />
         </Routes>
       </main>
     </React.Fragment>

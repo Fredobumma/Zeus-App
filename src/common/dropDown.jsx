@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const DropDown = ({ items, wrapperClasses, listClasses, linkClasses }) => {
+const DropDown = ({ items, wrapperClasses, linkClasses }) => {
   return (
     <span className={wrapperClasses}>
       <ul
@@ -9,12 +10,12 @@ const DropDown = ({ items, wrapperClasses, listClasses, linkClasses }) => {
       >
         {items.map((link, index) => (
           <li key={index}>
-            <a
-              href="#empty"
+            <Link
+              to={`/${link.replaceAll(" ", "")}`}
               className={`active:text-white active:bg-secondary block focus:font-semibold hover:font-semibold outline-0 px-4 py-2 ${linkClasses}`}
             >
               {link}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>

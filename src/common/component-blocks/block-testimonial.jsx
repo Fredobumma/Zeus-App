@@ -1,6 +1,6 @@
 import React from "react";
 import Figure from "../figure";
-import ParagrapghText from "../paragrapghText";
+import ParagraphText from "../paragraphText";
 
 const Testimonials = () => {
   const testimonialCards = [
@@ -95,17 +95,17 @@ const Testimonials = () => {
                 <div className="inline-flex items-center">
                   <Figure classes={`sprite ${spriteImage} h-16 w-16`} />
                   <div>
-                    <ParagrapghText
+                    <ParagraphText
                       classes="font-medium text-sm tablet:text-base tablet:leading-5"
                       content={fullName}
                     />
-                    <ParagrapghText
+                    <ParagraphText
                       classes="font-normal opacity-50 text-sm tablet:text-base"
                       content={userName}
                     />
                   </div>
                 </div>
-                <ParagrapghText classes="text-secondary" content={text} />
+                <ParagraphText classes="text-secondary" content={text} />
               </div>
             )
           )}

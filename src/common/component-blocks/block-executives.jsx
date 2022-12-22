@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../header";
 import Figure from "../figure";
-import ParagrapghText from "../paragrapghText";
+import ParagraphText from "../paragraphText";
 
 const Executives = () => {
   const team = [
@@ -43,11 +43,11 @@ const Executives = () => {
         {team.map(({ fullName, position, spriteImage }, index) => (
           <div key={index} className="inline-flex items-center flex-col h-auto">
             <Figure classes={`sprite ${spriteImage} h-20 w-81`} />
-            <ParagrapghText
+            <ParagraphText
               classes="font-bold text-xl tablet:text-2xl my-2 tablet:my-3"
               content={fullName}
             />
-            <ParagrapghText
+            <ParagraphText
               classes="font-light text-secondary text-sm"
               content={position}
             />

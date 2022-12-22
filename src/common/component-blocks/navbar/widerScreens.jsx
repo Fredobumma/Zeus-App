@@ -13,12 +13,12 @@ const WiderScreens = ({ navLinks, plansList, subMenuIcon, toggleSubMenu }) => {
       <ul className="hidden py-3 laptop:inline-flex">
         {navLinks.slice(0, 3).map((link, index) => (
           <li key={index}>
-            <a
-              href="#empty"
+            <Link
+              to={`/${link.replaceAll(" ", "")}`}
               className="active:opacity-100 active:text-secondary focus:opacity-100 focus:text-secondary hover:opacity-100 hover:text-secondary font-medium opacity-50 px-6 py-3"
             >
               {link}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>
