@@ -13,6 +13,7 @@ import Socials from "./components/socials";
 import Activity from "./components/activity";
 import License from "./components/license";
 import Refunds from "./components/refunds";
+import Cookies from "./components/cookies";
 import useWindowDimensions from "./common/utilities/useWindowDimensions";
 
 function App() {
@@ -72,6 +73,7 @@ function App() {
           <Route path="/activity" element={<Activity />} />
           <Route path="/license" element={<License />} />
           <Route path="/refunds" element={<Refunds />} />
+          <Route path="/cookies" element={<Cookies />} />
         </Routes>
       </main>
     </React.Fragment>
