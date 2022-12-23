@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import MobileView from "./navbar/mobileView";
 import WiderScreens from "./navbar/widerScreens";
 import HamburgerMenu from "../hamburgerMenu";
@@ -11,6 +12,7 @@ const Navbar = ({
   toggleMenu,
   toggleSubMenu,
 }) => {
+  const navigate = useNavigate();
   const navLinks = [
     "Home",
     "University",
@@ -34,6 +36,7 @@ const Navbar = ({
         <Logo
           id="logo"
           classes="absolute h-8 inset-0 mt-2 mx-auto my-0 w-121 tablet:h-10 tablet:mt-1 tablet:w-150"
+          onClick={() => navigate("/")}
         />
         {menuIcon && screenWidth < 1024 && (
           <MobileView
