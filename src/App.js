@@ -11,6 +11,7 @@ import Resources from "./components/resources";
 import Careers from "./components/careers";
 import Socials from "./components/socials";
 import Activity from "./components/activity";
+import License from "./components/license";
 import useWindowDimensions from "./common/utilities/useWindowDimensions";
 
 function App() {
@@ -68,6 +69,7 @@ function App() {
           <Route path="/careers" element={<Careers />} />
           <Route path="/socials" element={<Socials />} />
           <Route path="/activity" element={<Activity />} />
+          <Route path="/license" element={<License />} />
         </Routes>
       </main>
     </React.Fragment>
