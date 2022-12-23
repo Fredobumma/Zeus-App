@@ -16,6 +16,7 @@ import Refunds from "./components/refunds";
 import Cookies from "./components/cookies";
 import PrivacyPolicy from "./components/privacyPolicy";
 import TermsConditions from "./components/t&c";
+import Signout from "./components/plans/signout";
 import NotFound from "./components/not-found";
 import useWindowDimensions from "./common/utilities/useWindowDimensions";
 
@@ -80,6 +81,7 @@ function App() {
           <Route path="/cookies" element={<Cookies />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-&-conditions" element={<TermsConditions />} />
+          <Route path="/signout" element={<Signout />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
