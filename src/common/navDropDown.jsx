@@ -11,7 +11,7 @@ const NavDropDown = ({ items, wrapperClasses, linkClasses }) => {
         {items.map((link, index) => (
           <li key={index}>
             <Link
-              to={`/Plans/${link.replaceAll(" ", "")}`}
+              to={`/plans/${link.toLowerCase().replaceAll(" ", "-")}`}
               className={`active:text-white active:bg-secondary block focus:font-semibold hover:font-semibold outline-0 px-4 py-2 ${linkClasses}`}
             >
               {link}

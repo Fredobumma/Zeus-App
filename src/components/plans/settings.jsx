@@ -1,5 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
+import _ from "lodash";
 import Header from "../../common/header";
 import ParagraphText from "../../common/paragraphText";
 
@@ -12,7 +13,7 @@ const Settings = () => {
       <Header
         header="max-w-80% mt-12 mx-auto text-center text-secondary bigTab:max-w-700 laptop:max-w-80%"
         type="h2"
-        heading={`This is the ${title} Component`}
+        heading={`This is the ${_.capitalize(title)} Component`}
         headingClasses="font-bold tablet:leading-[56px] text-3xl tablet:text-40 laptop:text-5xl"
         text="This component has been implemented for the purpose of routing as there's no design for it."
         textClasses="mb-6 mt-4 text-center text-base tablet:mt-8 laptop:my-8"

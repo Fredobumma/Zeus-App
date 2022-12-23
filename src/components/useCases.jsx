@@ -1,14 +1,21 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
+import _ from "lodash";
 import Header from "../common/header";
 import ParagraphText from "../common/paragraphText";
 
 const UseCases = () => {
+  const { pathname } = useLocation();
+  const title = pathname.slice(1);
+
   return (
     <React.Fragment>
       <Header
         header="max-w-80% mx-auto pb-6 pt-12 text-center text-secondary tablet:pt-16 bigTab:max-w-700 laptop:max-w-80% laptop:pt-28"
         type="h1"
-        heading="This is the Use Cases Component"
+        heading={`This is the ${_.startCase(
+          title.replaceAll("-", " ")
+        )} Component`}
         headingClasses="font-bold text-40 tablet:text-7xl laptop:text-80"
         text="This component has been implemented for the purpose of routing as there's no design for it."
         textClasses="mb-6 mt-4 text-center text-base tablet:mt-8 laptop:my-8"
