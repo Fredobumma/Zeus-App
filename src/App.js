@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import { SVGSource } from "./common/svg";
 import Navbar from "./common/component-blocks/navbar";
 import Home from "./components/home";
@@ -16,6 +16,7 @@ import Refunds from "./components/refunds";
 import Cookies from "./components/cookies";
 import PrivacyPolicy from "./components/privacyPolicy";
 import TermsConditions from "./components/t&c";
+import NotFound from "./components/not-found";
 import useWindowDimensions from "./common/utilities/useWindowDimensions";
 
 function App() {
@@ -52,8 +53,9 @@ function App() {
       />
       <main className="mx-auto">
         <Routes>
+          <Route path="/" element={<Navigate to="/home" />} />
           <Route
-            path="/home/*"
+            path="/home"
             element={
               <Home
                 collapsible={collapsible}
@@ -78,6 +80,7 @@ function App() {
           <Route path="/cookies" element={<Cookies />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-&-conditions" element={<TermsConditions />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
     </React.Fragment>
