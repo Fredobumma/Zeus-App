@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import { SVGSource } from "./common/svg";
 import Navbar from "./common/component-blocks/navbar";
@@ -26,6 +25,13 @@ function App() {
     setCollapsible(clonedArray);
   };
 
+  const scrollToSection = (elementRef) => {
+    window.scrollTo({
+      top: elementRef[0].current.offsetTop,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <React.Fragment>
       <SVGSource />
@@ -39,7 +45,7 @@ function App() {
       <main className="mx-auto">
         <Routes>
           <Route
-            path="/home"
+            path="/home/*"
             element={
               <Home
                 collapsible={collapsible}
@@ -47,12 +53,13 @@ function App() {
                 width={width}
                 toggleExtension={() => setFooterExtension(!footerExtension)}
                 handleCollapsible={handleCollapsible}
+                scrollToSection={scrollToSection}
               />
             }
           />
           <Route path="/university" element={<University />} />
           <Route path="/courses" element={<Courses />} />
-          <Route path="/usecases" element={<UseCases />} />
+          <Route path="/use-cases" element={<UseCases />} />
           <Route path="/plans/*" element={<Plans />} />
           <Route path="/resources" element={<Resources />} />
         </Routes>

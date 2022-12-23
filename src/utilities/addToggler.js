@@ -1,1 +1,2 @@
-export const addToggler = (target, value) => target === value;
+export const addToggler = (target, value, extraValue) =>
+  target === value || target === extraValue;

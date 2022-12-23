@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import Hero from "../common/component-blocks/block-hero";
 import Sponsors from "../common/component-blocks/block-brands";
 import Showcase from "../common/component-blocks/block-showcase";
@@ -9,28 +9,21 @@ import Faq from "../common/component-blocks/block-faq";
 import Callout from "../common/component-blocks/block-callout";
 import Footer from "../common/component-blocks/block-footer";
 
-const Home = ({
-  collapsible,
-  footerExtension,
-  width,
-  toggleExtension,
-  handleCollapsible,
-}) => {
+const Home = ({ collapsible, handleCollapsible, ...rest }) => {
+  const aboutUs = useRef(null);
+  const team = useRef(null);
+
   return (
     <React.Fragment>
       <Hero />
       <Sponsors />
       <Showcase />
-      <Executives />
-      <OurServices />
+      <Executives teamRef={team} />
+      <OurServices aboutUs={aboutUs} />
       <Testimonials />
       <Faq collapsible={collapsible} handleCollapse={handleCollapsible} />
       <Callout />
-      <Footer
-        screenWidth={width}
-        footerExtension={footerExtension}
-        toggleExtension={toggleExtension}
-      />
+      <Footer team={team} aboutUs={aboutUs} {...rest} />
     </React.Fragment>
   );
 };

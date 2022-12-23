@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import DropDown from "../../dropDown";
+import NavDropDown from "../../navDropDown";
 import Toggler from "../../toggler";
 import SignOut from "../../signOut";
 import { addToggler } from "../../../utilities/addToggler";
@@ -14,7 +14,7 @@ const WiderScreens = ({ navLinks, plansList, subMenuIcon, toggleSubMenu }) => {
         {navLinks.slice(0, 3).map((link, index) => (
           <li key={index}>
             <Link
-              to={`/${link.replaceAll(" ", "")}`}
+              to={`/${link.toLowerCase().replaceAll(" ", "-")}`}
               className="active:opacity-100 active:text-secondary focus:opacity-100 focus:text-secondary hover:opacity-100 hover:text-secondary font-medium opacity-50 px-6 py-3"
             >
               {link}
@@ -31,7 +31,10 @@ const WiderScreens = ({ navLinks, plansList, subMenuIcon, toggleSubMenu }) => {
             onClick={isVisible(link) ? toggleSubMenu : null}
           >
             <Link
-              to={!isVisible(link) && `/${link.replaceAll(" ", "")}`}
+              to={
+                !isVisible(link) &&
+                `/${link.toLowerCase().replaceAll(" ", "-")}`
+              }
               className={`active:opacity-100 active:text-secondary focus:opacity-100 focus:text-secondary hover:opacity-100 hover:text-secondary font-medium opacity-50 px-6 py-3 ${
                 isVisible(link) && "flex mt-[-12px]"
               }`}
@@ -49,7 +52,7 @@ const WiderScreens = ({ navLinks, plansList, subMenuIcon, toggleSubMenu }) => {
                 id="sub-navbar-dropdown"
                 className="absolute bg-white divide-y-2 divide-gray-100 font-normal inset-x-0 max-w-90% mt-2 mx-auto rounded shadow text-center top-[50%] z-20"
               >
-                <DropDown
+                <NavDropDown
                   items={plansList}
                   linkClasses="focus:bg-gray-100 hover:bg-gray-100"
                 />

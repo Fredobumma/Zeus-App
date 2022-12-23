@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import DropDown from "../../dropDown";
+import NavDropDown from "../../navDropDown";
 import Toggler from "../../toggler";
 import SignOut from "../../signOut";
 import { addToggler } from "../../../utilities/addToggler";
@@ -19,7 +19,10 @@ const MobileView = ({ navLinks, plansList, subMenuIcon, toggleSubMenu }) => {
             onClick={isVisible(link) ? toggleSubMenu : null}
           >
             <Link
-              to={!isVisible(link) && `/${link.replaceAll(" ", "")}`}
+              to={
+                !isVisible(link) &&
+                `/${link.toLowerCase().replaceAll(" ", "-")}`
+              }
               className={`active:text-white active:bg-secondary block focus:bg-white focus:font-medium focus:text-secondary hover:bg-white hover:font-medium hover:text-secondary py-2 pl-3 pr-4 text-gray-700 rounded outline-0 ${
                 isVisible(link) && "flex items-center justify-between w-full"
               }`}
@@ -38,7 +41,7 @@ const MobileView = ({ navLinks, plansList, subMenuIcon, toggleSubMenu }) => {
                 id="sub-navbar-dropdown"
                 className="font-normal bg-white divide-y-2 divide-gray-100 rounded shadow my-2 mx-auto max-w-90%"
               >
-                <DropDown
+                <NavDropDown
                   items={plansList}
                   linkClasses="focus:bg-gray-100 hover:bg-gray-100"
                 />

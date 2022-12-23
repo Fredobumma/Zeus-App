@@ -3,7 +3,7 @@ import Header from "../header";
 import ParagraphText from "../paragraphText";
 import { SVG } from "../svg";
 
-const OurServices = () => {
+const OurServices = ({ aboutUs }) => {
   const services = [
     {
       id: "host",
@@ -28,7 +28,7 @@ const OurServices = () => {
   ];
 
   return (
-    <section className="py-12 tablet:py-16 laptop:py-20">
+    <section ref={aboutUs} className="py-12 tablet:py-16 laptop:py-20">
       <Header
         header="max-w-80% mx-auto text-center bigTab:max-w-700 laptop:max-w-80%"
         type="h2"

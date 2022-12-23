@@ -3,7 +3,7 @@ import WiderView from "./footer/widerView";
 import MobileLaptopView from "./footer/mobileLaptopView";
 import CopyRight from "../copyright";
 
-const Footer = ({ footerExtension, screenWidth, toggleExtension }) => {
+const Footer = ({ screenWidth, ...rest }) => {
   const mobileLinks = [
     "About Us",
     "Team",
@@ -21,24 +21,22 @@ const Footer = ({ footerExtension, screenWidth, toggleExtension }) => {
   ];
 
   return (
-    <div className="pb-8 pt-12 tablete:pt-16 laptop:pb-10 laptop:pt-20">
+    <footer className="pb-8 pt-12 tablete:pt-16 laptop:pb-10 laptop:pt-20">
       {screenWidth >= 1280 ? (
         <WiderView
           mobileLinks={mobileLinks}
           widerScreenLinks={widerScreenLinks}
-          footerExtension={footerExtension}
-          toggleExtension={toggleExtension}
+          {...rest}
         />
       ) : (
         <MobileLaptopView
           mobileLinks={mobileLinks}
           widerScreenLinks={widerScreenLinks}
-          footerExtension={footerExtension}
-          toggleExtension={toggleExtension}
+          {...rest}
         />
       )}
       <CopyRight />
-    </div>
+    </footer>
   );
 };
 

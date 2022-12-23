@@ -3,7 +3,7 @@ import Header from "../header";
 import Figure from "../figure";
 import ParagraphText from "../paragraphText";
 
-const Executives = () => {
+const Executives = ({ teamRef }) => {
   const team = [
     {
       fullName: "Guy Hawkins",
@@ -28,7 +28,7 @@ const Executives = () => {
   ];
 
   return (
-    <section className="py-12 tablet:py-16 laptop:py-20">
+    <section ref={teamRef} className="py-12 tablet:py-16 laptop:py-20">
       <Header
         header="max-w-80% mx-auto text-center bigTab:max-w-700 laptop:max-w-80%"
         type="h2"

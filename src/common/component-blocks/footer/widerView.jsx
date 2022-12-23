@@ -1,16 +1,25 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Toggler from "../../toggler";
 import DropDown from "../../dropDown";
 import Logo from "../../logo";
 import { addToggler } from "../../../utilities/addToggler";
 
 const WiderView = ({
+  aboutUs,
+  team,
   mobileLinks,
   widerScreenLinks,
   footerExtension,
   toggleExtension,
+  scrollToSection,
 }) => {
   const more = (link) => addToggler(link, widerScreenLinks[0]);
+  const altLink = (link) => addToggler(link, "About Us", "Team");
+  const refValues = [
+    { title: "About Us", value: aboutUs },
+    { title: "Team", value: team },
+  ];
 
   return (
     <div className="border-b border-line flex justify-between pb-10 relative">
@@ -18,9 +27,12 @@ const WiderView = ({
         <ul className="flex flex-row-reverse">
           {widerScreenLinks.slice(3).map((link, index) => (
             <li key={index}>
-              <a href="#empty" className="font-medium opacity-50 px-6">
+              <Link
+                to={`/${link.toLowerCase().replaceAll(" ", "-")}`}
+                className="font-medium opacity-50 px-6"
+              >
                 {link}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -34,8 +46,10 @@ const WiderView = ({
               title={more(link) ? "Click for more" : null}
               onClick={more(link) ? toggleExtension : null}
             >
-              <a
-                href="#empty"
+              <Link
+                to={
+                  !more(link) && `/${link.toLowerCase().replaceAll(" ", "-")}`
+                }
                 className="flex focus:opacity-100 focus:text-secondary hover:opacity-100 hover:text-secondary font-medium opacity-50 px-6"
               >
                 {link}
@@ -45,12 +59,15 @@ const WiderView = ({
                   close="down"
                   isVisible={more(link)}
                 />
-              </a>
+              </Link>
               {more(link) && footerExtension && (
                 <DropDown
-                  items={mobileLinks}
                   wrapperClasses="absolute bg-gray-100 font-normal bottom-[150%] inset-x-0 mt-2 mx-auto rounded shadow text-center"
                   linkClasses="focus:bg-white hover:bg-white"
+                  refValues={refValues}
+                  items={mobileLinks}
+                  altLink={altLink}
+                  scrollToSection={scrollToSection}
                 />
               )}
             </li>
