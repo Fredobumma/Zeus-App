@@ -14,6 +14,7 @@ import Activity from "./components/activity";
 import License from "./components/license";
 import Refunds from "./components/refunds";
 import Cookies from "./components/cookies";
+import PrivacyPolicy from "./components/privacyPolicy";
 import useWindowDimensions from "./common/utilities/useWindowDimensions";
 
 function App() {
@@ -74,6 +75,7 @@ function App() {
           <Route path="/license" element={<License />} />
           <Route path="/refunds" element={<Refunds />} />
           <Route path="/cookies" element={<Cookies />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         </Routes>
       </main>
     </React.Fragment>
